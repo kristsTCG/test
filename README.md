@@ -1,16 +1,23 @@
 # Folder Documentation
 
 ## Overview
-This folder contains a single Python file named `test_code.py`. The purpose of this folder in the project is to house the code for testing specific functionalities or components.
+This folder contains a Python script named `test_code.py`. The purpose of this folder is to house the code related to a specific functionality or feature in the project.
 
 ## Structure
-The folder structure is simple, with only one Python file present. The file `test_code.py` is responsible for testing various functionalities within the project.
+The folder has a single Python file, `test_code.py`, which contains the implementation of the functionality it represents. The code may include functions, classes, and any necessary dependencies.
 
 ## Key Files
-- `test_code.py`: This file contains the testing code for specific functionalities or components within the project. It plays a crucial role in ensuring the reliability and correctness of the project's codebase.
+- **test_code.py**: This file is the main script in this folder, containing the implementation of a specific functionality. It is crucial for the proper functioning of the feature it represents.
 
 ## Usage
-To work with the code in this folder, you can open the `test_code.py` file in a Python IDE or text editor. You can run the tests defined in the file by executing it in a Python environment. Make sure to follow any specific instructions or guidelines provided within the file for running the tests effectively.
+To work with the code in this folder:
+1. Open the `test_code.py` file in a Python IDE or text editor.
+2. Review the code to understand the logic and functionality implemented.
+3. Make any necessary modifications or additions to the code.
+4. Run the script to test the functionality.
+5. Integrate the functionality into the larger project as needed.
+
+Ensure that any changes made to the code are thoroughly tested to maintain the integrity of the feature.
 
 ---
 
@@ -26,11 +33,11 @@ To work with the code in this folder, you can open the `test_code.py` file in a 
   - `get_user_by_id(user_id)`: Finds a user by ID
   - `find_user_by_email(email)`: Finds a user by email address
   - `get_active_users()`: Retrieves all active users
-  - `deactivate_user(user_id)`: Deactivates a user without deleting
+  - `deactivate_user(user_id)`: Deactivates a user instead of deleting
 
-**Usage:** Run the file to create a `UserManager` instance and interact with user management functions. Example usage includes adding users, searching for users by email, and deactivating users.
+**Usage:** Run the file to create a `UserManager` instance and use its methods to manage users. Example usage is provided at the end of the file.
 
 **Dependencies:** None
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-17 16:42:53*
+*Auto-generated documentation - Last updated: 2025-07-17 16:43:18*
