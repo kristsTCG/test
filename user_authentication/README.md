@@ -1,25 +1,19 @@
 # user_authentication
 
 ## Overview
-The `user_authentication` folder contains files related to user authentication functionality in the project. This module handles user validation and authentication processes.
+The `user_authentication` folder contains files related to user authentication functionality within the project. This includes validation of user input and authentication processes.
 
 ## Structure
-The folder is organized to manage user authentication tasks efficiently. It includes validator.js for client-side validation and auth.py for server-side authentication.
+The folder is organized to handle user authentication tasks efficiently. It includes two key files: `validator.js` written in JavaScript and `auth.py` written in Python.
 
 ## Key Files
-- **validator.js**: This JavaScript file contains client-side validation logic for user input. It plays a crucial role in ensuring data integrity and security on the client side.
-- **auth.py**: The Python file `auth.py` is responsible for server-side authentication processes. It manages user authentication, session handling, and access control within the application.
+- `validator.js`: This JavaScript file contains functions for validating user input data. It plays a crucial role in ensuring that user-provided information meets the required criteria for authentication.
+- `auth.py`: The Python file `auth.py` is responsible for handling the authentication process. It manages user login, registration, and authentication logic within the application.
 
 ## Usage
-1. **validator.js**:
-   - Modify the validation rules as needed for user input fields.
-   - Include this file in your HTML templates using `<script>` tags to enable client-side validation.
+Developers can utilize the `validator.js` file to implement input validation for user authentication forms. The functions within this file can be called to validate user input such as email addresses, passwords, and other required fields.
 
-2. **auth.py**:
-   - Integrate the authentication logic into your server-side codebase.
-   - Use the functions provided in `auth.py` to authenticate users, manage sessions, and control access to protected resources.
-
-Ensure that both client-side and server-side authentication mechanisms work seamlessly together to provide a secure user authentication experience.
+For the authentication process, developers can refer to the `auth.py` file to integrate user registration, login, and authentication functionalities into the project. This file provides the necessary logic to authenticate users securely and manage user sessions effectively.
 
 ---
 
@@ -27,38 +21,38 @@ Ensure that both client-side and server-side authentication mechanisms work seam
 
 ## validator.js
 
-**Purpose:** This file provides input validation utilities for user authentication, including email, password, and username validation, as well as password strength assessment.
+**Purpose:** This file contains input validation utilities for user authentication, including email, password, and username validation, as well as a function to determine the strength of a password.
 
 **Key Components:**
-- `validateEmail(email)`: Validates the format of an email address using a regular expression.
-- `validatePassword(password)`: Validates the strength of a password based on specific criteria.
-- `validateUsername(username)`: Validates the format of a username allowing alphanumeric characters and underscores within a specific length range.
-- `getPasswordStrength(password)`: Assesses the strength of a password based on length and character types.
+- `validateEmail(email)`: Validates if the input email is in a valid format.
+- `validatePassword(password)`: Validates if the input password meets certain criteria (at least 8 characters with uppercase, lowercase, and number).
+- `validateUsername(username)`: Validates if the input username meets certain criteria (3-20 characters, alphanumeric and underscores only).
+- `getPasswordStrength(password)`: Determines the strength of a password based on length and character types.
 
-**Usage:** This file can be imported as a module in other JavaScript files to perform input validation tasks.
+**Usage:** This file can be imported using `require` or `import` statements to access the input validation functions.
 
 **Dependencies:** No external dependencies are required for this file.
 
 ## auth.py
 
-**Purpose:** This file implements a user authentication system with login and registration functionality.
+**Purpose:** This file contains a user authentication system with login and registration functionality.
 
 **Key Components:**
-- `UserAuth`: Class to manage user authentication operations.
-- `hash_password`: Method to hash a password using SHA-256.
-- `register_user`: Method to register a new user with a unique username, email, and password.
-- `login`: Method to authenticate a user with a username and password and generate a session token.
-- `logout`: Method to end a user session using a session token.
-- `is_authenticated`: Method to check if a session token is valid.
+- `UserAuth`: Class that manages user registration, login, session handling, and authentication.
+  - `hash_password(password: str) -> str`: Hashes a password using SHA-256.
+  - `register_user(username: str, email: str, password: str) -> bool`: Registers a new user with a unique username.
+  - `login(username: str, password: str) -> Optional[str]`: Authenticates a user and returns a session token.
+  - `logout(session_token: str) -> bool`: Ends a user session.
+  - `is_authenticated(session_token: str) -> bool`: Checks if a session token is valid.
 
-**Usage:** Instantiate the `UserAuth` class to utilize the user authentication functionalities provided in this file.
+**Usage:** Instantiate the `UserAuth` class to manage user authentication operations like registration, login, session handling, and authentication.
 
 **Dependencies:**
-- `hashlib`: For hashing passwords.
-- `json`: For JSON serialization.
+- `hashlib`: For hashing functions.
+- `json`: For JSON serialization/deserialization.
 - `datetime`: For working with dates and times.
 - `timedelta`: For calculating time differences.
 - `typing`: For type hints.
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-17 22:06:13*
+*Auto-generated documentation - Last updated: 2025-07-17 22:06:37*
