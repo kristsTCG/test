@@ -1,26 +1,26 @@
 # user_authentication
 
 ## Overview
-The `user_authentication` folder contains files related to user authentication functionalities within the project. This includes validation of user input and authentication logic.
+The `user_authentication` folder contains files related to user authentication functionalities within the project. This includes validation of user input and authentication processes.
 
 ## Structure
-The folder is organized to handle user authentication tasks efficiently. It contains two key files: `validator.js` for client-side input validation written in JavaScript and `auth.py` for server-side authentication logic written in Python.
+The folder is organized to handle user authentication tasks efficiently. It includes two key files, `validator.js` written in JavaScript and `auth.py` written in Python.
 
 ## Key Files
-- **validator.js**: This file contains functions for validating user input on the client-side. It plays a crucial role in ensuring that user-provided data meets the required criteria before submission.
+- **validator.js**: This JavaScript file contains functions for validating user input. It plays a crucial role in ensuring that user data meets specified criteria before proceeding with authentication processes.
   
-- **auth.py**: The `auth.py` file is responsible for handling server-side authentication processes. It manages user authentication, login, and authorization within the application.
+- **auth.py**: The Python file `auth.py` is responsible for handling user authentication logic. It manages user login, registration, and authentication processes within the system.
 
 ## Usage
 1. **validator.js**:
-   - To use the validation functions in `validator.js`, include the file in your HTML document using a script tag.
-   - Call the appropriate validation functions on user input fields to ensure data integrity.
-
+   - To use the functions in `validator.js`, import the file into your JavaScript project.
+   - Call the validation functions as needed to validate user input before processing it further.
+  
 2. **auth.py**:
-   - Import `auth.py` in your Python application to access the authentication functionalities.
-   - Utilize the provided functions for user authentication, login, and authorization processes as needed.
+   - Import `auth.py` into your Python project to access the authentication functionalities.
+   - Utilize the provided functions for user login, registration, and authentication processes within your application.
 
-Ensure that you follow the specific usage instructions within each file to integrate user authentication features seamlessly into your project.
+Ensure to follow the documentation within each file for specific usage instructions and parameters.
 
 ---
 
@@ -28,38 +28,37 @@ Ensure that you follow the specific usage instructions within each file to integ
 
 ## validator.js
 
-**Purpose:** This file provides input validation utilities for user authentication, including email, password, and username validation, as well as password strength assessment.
+**Purpose:** This file contains input validation utilities for user authentication, including email, password, and username validation, as well as a function to determine password strength.
 
 **Key Components:**
 - `validateEmail(email)`: Validates if the input email is in a valid format.
-- `validatePassword(password)`: Validates if the input password meets the criteria of at least 8 characters with uppercase, lowercase, and number.
+- `validatePassword(password)`: Validates if the input password meets the criteria of being at least 8 characters with uppercase, lowercase, and a number.
 - `validateUsername(username)`: Validates if the input username is 3-20 characters long and contains only alphanumeric characters and underscores.
-- `getPasswordStrength(password)`: Calculates the strength of the input password based on length and character types.
+- `getPasswordStrength(password)`: Determines the strength of a password based on its length and character composition.
 
-**Usage:** Import the `InputValidator` class from this file to use the provided validation functions in your authentication logic.
+**Usage:** Import the `InputValidator` class from this file to use the validation functions in your authentication logic.
 
-**Dependencies:** No external dependencies.
+**Dependencies:** None.
 
 ## auth.py
 
 **Purpose:** This file contains a user authentication system with login and registration functionality.
 
 **Key Components:**
-- `UserAuth`: Class that manages user registration, login, and session handling.
-- `hash_password`: Method to hash a password using SHA-256.
-- `register_user`: Method to register a new user with a unique username, email, and password.
-- `login`: Method to authenticate a user and generate a session token.
-- `logout`: Method to end a user's session.
-- `is_authenticated`: Method to check if a session token is valid.
+- `UserAuth`: Class that manages user authentication operations.
+  - `hash_password(password: str) -> str`: Method to hash a password using SHA-256.
+  - `register_user(username: str, email: str, password: str) -> bool`: Method to register a new user.
+  - `login(username: str, password: str) -> Optional[str]`: Method to authenticate a user and return a session token.
+  - `logout(session_token: str) -> bool`: Method to end a user session.
+  - `is_authenticated(session_token: str) -> bool`: Method to check if a session token is valid.
 
-**Usage:** Instantiate the `UserAuth` class to utilize the user authentication functionalities provided in this file.
+**Usage:** Instantiate `UserAuth` to manage user authentication operations. Call methods like `register_user`, `login`, `logout`, and `is_authenticated` as needed.
 
-**Dependencies:**
-- `hashlib`: For hashing passwords.
-- `json`: For JSON serialization.
-- `datetime`: For working with dates and times.
-- `timedelta`: For calculating time differences.
-- `typing`: For type hints.
+**Dependencies:** 
+- `hashlib`: Used for hashing passwords.
+- `json`: Not used in the provided code but imported.
+- `datetime`: Used for working with dates and times.
+- `timedelta`: Used for adding time intervals to `datetime`.
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-17 22:01:53*
+*Auto-generated documentation - Last updated: 2025-07-17 22:02:19*
