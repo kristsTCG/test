@@ -1,0 +1,35 @@
+name: Generate Documentation on Task Complete
+
+on:
+  repository_dispatch:
+    types: [clickup-task-complete]
+
+jobs:
+  generate-documentation:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Fetch full history for commit analysis
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests openai
+    
+    - name: Generate Documentation
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        CLICKUP_API_KEY: ${{ secrets.CLICKUP_API_KEY }}
+        TASK_ID: ${{ github.event.client_payload.task_id }}
+        TASK_NAME: ${{ github.event.client_payload.task_name }}
+        TASK_URL: ${{ github.event.client_payload.task_url }}
+        SPACE_ID: ${{ github.event.client_payload.space_id }}
+      run: python .github/scripts/generate_documentation.py
