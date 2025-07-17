@@ -1,28 +1,20 @@
 # user_authentication
 
 ## Overview
-The `user_authentication` folder contains files related to user authentication functionalities within the project. This includes validation of user input and authentication logic.
+The `user_authentication` folder contains files related to user authentication functionalities in the project. It handles user validation and authentication processes.
 
 ## Structure
-The folder is organized to handle user authentication tasks efficiently. It contains two key files: `validator.js` for client-side input validation in JavaScript and `auth.py` for server-side authentication in Python.
+The folder is organized to manage user authentication tasks efficiently. It includes two key files: `validator.js` written in JavaScript and `auth.py` written in Python.
 
 ## Key Files
-1. **validator.js**: This file is responsible for client-side input validation. It contains functions to validate user input before submitting it to the server. With 1212 characters, it plays a crucial role in ensuring data integrity and security on the client side.
-   
-2. **auth.py**: This Python file handles server-side authentication processes. With 2198 characters, it manages user authentication, login, and authorization within the application. It interacts with the database and ensures secure access to user accounts.
+- `validator.js`: This JavaScript file contains 1212 characters and is responsible for validating user input data for authentication purposes.
+- `auth.py`: This Python file contains 2198 characters and manages the authentication process for users within the system.
 
 ## Usage
-1. **validator.js**:
-   - Modify the validation rules as needed for different input fields.
-   - Include this script in your HTML files to enable client-side validation.
-   - Ensure that the validation logic aligns with the server-side validation to maintain data consistency.
-
-2. **auth.py**:
-   - Implement additional authentication logic as required by the project.
-   - Securely store sensitive information such as passwords and tokens.
-   - Integrate this file with other components that require user authentication, such as user profile management or access control.
-
-By following the guidelines outlined in the key files, developers can effectively manage user authentication processes in the project.
+To utilize the user authentication functionalities provided in this folder, follow these steps:
+1. Review the `validator.js` file to understand how user input data is validated.
+2. Explore the `auth.py` file to comprehend the authentication process for users.
+3. Integrate these files into your project to enable user authentication features.
 
 ---
 
@@ -30,33 +22,39 @@ By following the guidelines outlined in the key files, developers can effectivel
 
 ## validator.js
 
-**Purpose:** This file contains input validation utilities for user authentication, including email, password, and username validation, as well as a function to determine password strength.
+**Purpose:** This file provides input validation utilities for user authentication, including email, password, and username validation, as well as password strength assessment.
 
 **Key Components:**
 - `validateEmail(email)`: Validates the format of an email address.
-- `validatePassword(password)`: Validates the strength of a password based on specific criteria.
-- `validateUsername(username)`: Validates the format of a username.
-- `getPasswordStrength(password)`: Determines the strength level of a password based on length and character requirements.
+- `validatePassword(password)`: Validates the strength of a password based on length, uppercase, lowercase, and numbers.
+- `validateUsername(username)`: Validates the format of a username with alphanumeric and underscore characters.
+- `getPasswordStrength(password)`: Calculates the strength level of a password based on length and character types.
 
-**Usage:** To use this file, import `InputValidator` class where input validation is needed.
+**Usage:** Import `InputValidator` class from this file to use the validation functions in your authentication logic.
 
-**Dependencies:** No external dependencies.
+**Dependencies:** This file does not have any external dependencies.
 
 ## auth.py
 
-**Purpose:** User authentication system with login and registration functionality.
+**Purpose:** This file contains a user authentication system with login and registration functionality. It allows users to register, login, logout, and check authentication status.
 
 **Key Components:**
-- `UserAuth`: Class managing user authentication operations.
-  - `hash_password(password: str) -> str`: Hashes password using SHA-256.
-  - `register_user(username: str, email: str, password: str) -> bool`: Registers a new user.
-  - `login(username: str, password: str) -> Optional[str]`: Authenticates user and returns session token.
-  - `logout(session_token: str) -> bool`: Ends user session.
-  - `is_authenticated(session_token: str) -> bool`: Checks if session is valid.
+- `UserAuth`: Class that manages user authentication operations.
+- `hash_password(password: str) -> str`: Method to hash a password using SHA-256.
+- `register_user(username: str, email: str, password: str) -> bool`: Method to register a new user.
+- `login(username: str, password: str) -> Optional[str]`: Method to authenticate a user and return a session token.
+- `logout(session_token: str) -> bool`: Method to end a user session.
+- `is_authenticated(session_token: str) -> bool`: Method to check if a session token is valid.
 
-**Usage:** Instantiate `UserAuth` to manage user authentication operations.
+**Usage:** Instantiate the `UserAuth` class to use the authentication system. Call the methods `register_user`, `login`, `logout`, and `is_authenticated` as needed.
 
-**Dependencies:** hashlib, json, datetime, timedelta, typing
+**Dependencies:** 
+- `hashlib`: Used for hashing passwords.
+- `json`: Imported but not used in the provided code snippet.
+- `datetime`: Used for working with dates and times.
+- `timedelta`: Used for calculating time differences.
+- `typing.Optional`: Used for type hinting in function definitions.
+- `typing.Dict`: Used for type hinting in function definitions.
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-17 18:16:09*
+*Auto-generated documentation - Last updated: 2025-07-17 18:16:36*
