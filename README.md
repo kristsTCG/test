@@ -1,16 +1,20 @@
 # Folder Documentation
 
 ## Overview
-This folder contains a single Python file, `test_code.py`, which is 2127 characters long. The purpose of this folder in the project is to house the code for testing specific functionalities or components.
+This folder contains a single Python file, `test_code.py`, which is 2127 characters long. The purpose of this folder in the project is to house a test code script for a specific functionality or feature.
 
 ## Structure
-The folder structure is simple with only one Python file present. The file `test_code.py` is responsible for testing various functionalities within the project.
+The folder has a simple structure with only one Python file. The file `test_code.py` contains the code related to testing a specific aspect of the project.
 
 ## Key Files
-- `test_code.py`: This file is the main component of this folder and contains the testing code for specific functionalities in the project.
+- `test_code.py`: This file is the main script for testing a particular functionality in the project. It likely includes test cases, assertions, and other testing-related code.
 
 ## Usage
-To work with the code in this folder, you can open the `test_code.py` file in a Python IDE or text editor. Review the code to understand the specific tests being conducted and run the file to execute the tests. Make sure to follow any instructions or comments within the code for proper testing procedures.
+To work with the code in this folder, you can:
+1. Open the `test_code.py` file in a Python IDE or text editor.
+2. Review the code to understand the test cases and assertions being made.
+3. Modify the code as needed to add new test cases or update existing ones.
+4. Run the script using a Python interpreter to execute the tests and verify the functionality being tested.
 
 ---
 
@@ -22,15 +26,15 @@ To work with the code in this folder, you can open the `test_code.py` file in a 
 
 **Key Components:**
 - `UserManager`: Class to manage users with methods for adding, finding, getting active users, and deactivating users.
-- `add_user(name, email)`: Method to add a new user with email validation.
-- `get_user_by_id(user_id)`: Method to find a user by ID.
-- `find_user_by_email(email)`: Method to find a user by email address.
-- `get_active_users()`: Method to retrieve all active users.
-- `deactivate_user(user_id)`: Method to deactivate a user instead of deleting.
+  - `add_user(name, email)`: Adds a new user with email validation.
+  - `get_user_by_id(user_id)`: Finds a user by ID.
+  - `find_user_by_email(email)`: Finds a user by email address.
+  - `get_active_users()`: Retrieves all active users.
+  - `deactivate_user(user_id)`: Deactivates a user instead of deleting.
 
-**Usage:** To use this file, create an instance of `UserManager` and utilize its methods to manage users.
+**Usage:** The file can be used by importing the `UserManager` class and creating an instance to manage users.
 
 **Dependencies:** No external dependencies.
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-17 21:44:15*
+*Auto-generated documentation - Last updated: 2025-07-17 21:44:40*
