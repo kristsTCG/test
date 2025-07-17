@@ -1,22 +1,16 @@
 # Folder Documentation
 
 ## Overview
-This folder contains a single Python file, `test_code.py`, which is a part of the project's codebase. The purpose of this folder is to store and manage the code related to the functionality implemented in `test_code.py`.
+This folder contains a single Python file, `test_code.py`, which serves a specific purpose within the project.
 
 ## Structure
-The folder has a simple structure with only one Python file present. It is essential to understand the contents and functionality of `test_code.py` to work effectively within this folder.
+The folder is organized with a single Python file at the root level.
 
 ## Key Files
-- `test_code.py`: This Python file is the main component of this folder, containing 2127 characters of code. It likely implements specific functionality or features crucial to the project.
+- `test_code.py`: This file contains 2127 characters of Python code and is the main script for performing a specific task within the project.
 
 ## Usage
-To work with the code in this folder, follow these steps:
-1. Open `test_code.py` in a Python IDE or text editor to view and modify the code.
-2. Understand the functions, classes, or logic implemented in `test_code.py` to grasp its purpose within the project.
-3. Make necessary changes or additions to the code as required for project development.
-4. Ensure to test the modified code thoroughly to maintain the project's integrity and functionality.
-
-Remember to adhere to coding standards, version control practices, and project guidelines while working with the code in this folder.
+To work with the code in this folder, you can open `test_code.py` in a Python IDE or text editor to view and modify the code as needed. Run the script using a Python interpreter to execute its functionality.
 
 ---
 
@@ -34,9 +28,9 @@ Remember to adhere to coding standards, version control practices, and project g
   - `get_active_users()`: Retrieves all active users
   - `deactivate_user(user_id)`: Deactivates a user instead of deleting
 
-**Usage:** To use this file, you can import the `UserManager` class and create an instance to manage users. You can then add users, find users by ID or email, get active users, and deactivate users.
+**Usage:** Run the file to create a `UserManager` instance and perform user management operations. Example usage is provided at the end of the file.
 
 **Dependencies:** None
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-17 14:37:13*
+*Auto-generated documentation - Last updated: 2025-07-17 14:37:40*

@@ -1,21 +1,21 @@
 # user_authentication
 
 ## Overview
-The `user_authentication` folder contains files related to user authentication functionalities within the project. These files handle user validation and authentication processes.
+The `user_authentication` folder contains files related to user authentication functionalities within the project. It handles user validation and authentication processes.
 
 ## Structure
-The folder is organized to manage user authentication tasks efficiently. It includes two key files: `validator.js` written in JavaScript and `auth.py` written in Python.
+The folder is organized to manage user authentication tasks efficiently. It contains two key files: `validator.js` written in JavaScript and `auth.py` written in Python.
 
 ## Key Files
-1. `validator.js`: This JavaScript file contains functions for validating user input data. It plays a crucial role in ensuring that user-provided information meets the required criteria for authentication.
-   
-2. `auth.py`: The Python file `auth.py` is responsible for handling user authentication processes. It manages user login, registration, and authentication tasks within the system.
+- **validator.js**: This JavaScript file contains functions for validating user input data. It plays a crucial role in ensuring that user-provided information meets the required criteria for authentication.
+  
+- **auth.py**: The Python file `auth.py` is responsible for handling user authentication processes. It includes functions for user login, registration, and other authentication-related tasks.
 
 ## Usage
-To work with the code in this folder:
-- Review `validator.js` to understand the validation logic and criteria for user input data.
-- Explore `auth.py` to familiarize yourself with the user authentication processes implemented in Python.
-- Integrate these files into the project's authentication system as needed, ensuring proper validation and authentication of user data.
+To utilize the code in this folder effectively, follow these steps:
+1. Review the `validator.js` file to understand the validation logic implemented for user input data.
+2. Explore the `auth.py` file to familiarize yourself with the user authentication functionalities provided.
+3. Integrate the necessary functions from these files into your project to enable user authentication features.
 
 ---
 
@@ -26,35 +26,35 @@ To work with the code in this folder:
 **Purpose:** This file contains input validation utilities for user authentication, including email, password, and username validation, as well as a function to determine the strength of a password.
 
 **Key Components:**
-- `validateEmail(email)`: Validates if the input email is in a valid format.
-- `validatePassword(password)`: Validates if the input password meets the criteria of at least 8 characters with uppercase, lowercase, and a number.
-- `validateUsername(username)`: Validates if the input username is between 3-20 characters long and consists of alphanumeric characters and underscores only.
-- `getPasswordStrength(password)`: Determines the strength of the input password based on length and character types.
+- `validateEmail(email)`: Validates the format of an email address.
+- `validatePassword(password)`: Validates the strength of a password based on specific criteria.
+- `validateUsername(username)`: Validates the format of a username.
+- `getPasswordStrength(password)`: Determines the strength level of a password based on length and character requirements.
 
-**Usage:** This file can be imported in other JavaScript files using `require` or `import` statements to access the input validation functions.
+**Usage:** To use this file, import `InputValidator` class where input validation is needed and call the appropriate validation method.
 
-**Dependencies:** This file does not have any external dependencies.
+**Dependencies:** No external dependencies.
 
 ## auth.py
 
 **Purpose:** This file implements a user authentication system with login and registration functionality.
 
 **Key Components:**
-- `UserAuth`: Class that manages user registration, login, session handling, and authentication.
-- `hash_password(password: str) -> str`: Method to hash a password using SHA-256.
-- `register_user(username: str, email: str, password: str) -> bool`: Register a new user with a unique username.
-- `login(username: str, password: str) -> Optional[str]`: Authenticate a user and return a session token.
-- `logout(session_token: str) -> bool`: End a user session by removing the session token.
-- `is_authenticated(session_token: str) -> bool`: Check if a session token is valid and active.
+- `UserAuth`: Class that manages user authentication operations.
+- `hash_password`: Method to hash a password using SHA-256.
+- `register_user`: Method to register a new user with a unique username, email, and password.
+- `login`: Method to authenticate a user and generate a session token.
+- `logout`: Method to end a user session by invalidating the session token.
+- `is_authenticated`: Method to check if a session token is valid.
 
-**Usage:** Instantiate the `UserAuth` class to manage user authentication operations like registration, login, logout, and session validation.
+**Usage:** Instantiate the `UserAuth` class to manage user authentication operations. Call `register_user` to create a new user, `login` to authenticate and generate a session token, `logout` to end a session, and `is_authenticated` to check the validity of a session token.
 
-**Dependencies:**
-- `hashlib`: For hashing passwords using SHA-256.
-- `json`: For JSON serialization (not used in this file).
-- `datetime`: For managing dates and times.
-- `timedelta`: For calculating expiration time for session tokens.
-- `typing`: For type hints and annotations.
+**Dependencies:** 
+- `hashlib` for hashing functions.
+- `json` for JSON serialization.
+- `datetime` for date and time operations.
+- `timedelta` for time duration calculations.
+- `typing` for type hints.
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-17 14:37:19*
+*Auto-generated documentation - Last updated: 2025-07-17 14:37:48*
