@@ -1,51 +1,19 @@
 # user_authentication
 
 ## Overview
-The `user_authentication` folder contains files related to user authentication functionality within the project. This module is responsible for validating user input and handling user authentication processes.
+The `user_authentication` folder contains code related to user authentication functionalities in the project. It includes validation logic in JavaScript and authentication logic in Python.
 
 ## Structure
-The folder `user_authentication` contains two key files:
-- `validator.js`: A JavaScript file with 1212 characters, responsible for validating user input data.
-- `auth.py`: A Python file with 2198 characters, responsible for handling user authentication processes.
+The folder is organized to handle user authentication tasks efficiently. It contains two key files, `validator.js` and `auth.py`, which are responsible for validation and authentication, respectively.
 
 ## Key Files
-### validator.js
-This file contains functions for validating user input data to ensure it meets the required criteria before processing.
-
-### auth.py
-This file handles user authentication processes, such as user login, registration, and password management.
+- **validator.js**: This JavaScript file contains 1212 characters of code and handles user input validation for authentication processes.
+- **auth.py**: This Python file contains 2198 characters of code and manages user authentication, including login, registration, and session management.
 
 ## Usage
-1. To use the validation functions in `validator.js`, import the necessary functions into your JavaScript files and call them to validate user input data.
-   
-   Example:
-   ```javascript
-   import { validateUsername, validatePassword } from './validator.js';
-
-   const username = 'example_user';
-   const password = 'secure_password';
-
-   if (validateUsername(username) && validatePassword(password)) {
-       // Proceed with processing user input
-   } else {
-       // Display error messages to the user
-   }
-   ```
-
-2. To utilize the user authentication functionalities in `auth.py`, import the necessary functions into your Python files and call them as needed.
-
-   Example:
-   ```python
-   from auth import login, register, change_password
-
-   username = 'example_user'
-   password = 'secure_password'
-
-   if login(username, password):
-       # User authentication successful
-   else:
-       # User authentication failed
-   ```
+1. To utilize the validation logic, refer to `validator.js` and integrate the validation functions into your user input forms.
+2. For user authentication tasks, utilize the functions provided in `auth.py` such as login, registration, and session management.
+3. Ensure to maintain the integrity and security of user authentication data by following best practices outlined in the code files.
 
 ---
 
@@ -53,41 +21,38 @@ This file handles user authentication processes, such as user login, registratio
 
 ## validator.js
 
-**Purpose:** This file contains input validation utilities for user authentication, including validating email, password, and username inputs, as well as determining the strength of a password.
+**Purpose:** This file provides input validation utilities for user authentication, including email, password, and username validation, as well as a function to determine the strength of a password.
 
 **Key Components:**
-- `validateEmail(email)`: Validates the format of an email address using a regular expression.
-- `validatePassword(password)`: Validates the strength of a password based on length, uppercase, lowercase, and numeric characters.
-- `validateUsername(username)`: Validates the format of a username, allowing only alphanumeric characters and underscores within a specific length range.
-- `getPasswordStrength(password)`: Determines the strength level of a password based on length and character types.
+- `validateEmail(email)`: Validates if the input email is in a valid format.
+- `validatePassword(password)`: Validates if the input password meets the criteria of at least 8 characters with uppercase, lowercase, and a number.
+- `validateUsername(username)`: Validates if the input username is between 3-20 characters long and contains only alphanumeric characters and underscores.
+- `getPasswordStrength(password)`: Determines the strength of a password based on its length and character types.
 
-**Usage:** To use this file, import `InputValidator` class into your code. For example:
-```javascript
-const InputValidator = require('./validator.js');
-```
+**Usage:** Import the `InputValidator` class from this file to use the validation functions in your authentication logic.
 
-**Dependencies:** No external dependencies are required for this file.
+**Dependencies:** None.
 
 ## auth.py
 
-**Purpose:** This file contains a user authentication system with login and registration functionality.
+**Purpose:** This file provides a user authentication system with login and registration functionality.
 
 **Key Components:**
-- `UserAuth`: Class that manages user registration, login, and session handling.
-- `hash_password`: Method to hash a password using SHA-256.
-- `register_user`: Method to register a new user with a unique username, email, and password.
-- `login`: Method to authenticate a user and generate a session token.
-- `logout`: Method to end a user's session.
-- `is_authenticated`: Method to check if a session token is valid.
+- `UserAuth`: Class that manages user authentication operations.
+  - `hash_password(password: str) -> str`: Hashes a password using SHA-256.
+  - `register_user(username: str, email: str, password: str) -> bool`: Registers a new user with a unique username.
+  - `login(username: str, password: str) -> Optional[str]`: Authenticates a user and returns a session token.
+  - `logout(session_token: str) -> bool`: Ends a user session.
+  - `is_authenticated(session_token: str) -> bool`: Checks if a session token is valid.
 
-**Usage:** To use this file, create an instance of `UserAuth` and call its methods for user registration, login, logout, and session validation.
+**Usage:** Instantiate `UserAuth` to use the provided authentication functionalities.
 
-**Dependencies:** 
-- `hashlib`: For hashing passwords.
-- `json`: For JSON serialization.
-- `datetime`: For working with dates and times.
+**Dependencies:**
+- `hashlib`: For hashing functions.
+- `json`: For JSON serialization/deserialization.
+- `datetime`: For handling date and time operations.
 - `timedelta`: For calculating time differences.
 - `typing`: For type hints.
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-17 14:44:45*
+*Auto-generated documentation - Last updated: 2025-07-17 14:45:09*
