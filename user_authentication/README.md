@@ -1,23 +1,26 @@
 # user_authentication
 
 ## Overview
-The `user_authentication` folder contains files related to user authentication functionality within the project. This includes validation of user input and authentication logic.
+The `user_authentication` folder contains files related to user authentication functionalities within the project. It handles user validation and authentication processes to ensure secure access to the system.
 
 ## Structure
-The folder is organized to handle user authentication tasks efficiently. It contains two key files: `validator.js` for client-side input validation in JavaScript and `auth.py` for server-side authentication logic in Python.
+The folder `user_authentication` is organized with the following key components:
+- `validator.js`: A JavaScript file with 1212 characters responsible for user input validation.
+- `auth.py`: A Python file with 2198 characters handling user authentication processes.
 
 ## Key Files
-- **validator.js**: This file contains client-side validation logic written in JavaScript. It ensures that user input meets specified criteria before submission.
-- **auth.py**: The `auth.py` file contains server-side authentication logic written in Python. It handles user authentication processes such as login, registration, and session management.
+### validator.js
+The `validator.js` file is crucial for validating user input data to ensure it meets the required criteria before processing it further.
+
+### auth.py
+The `auth.py` file plays a vital role in authenticating users, verifying their identity, and granting access to the system based on the provided credentials.
 
 ## Usage
-1. **validator.js**:
-   - Modify the validation criteria as needed by updating the functions in this file.
-   - Include `validator.js` in your HTML files using `<script src="path/to/validator.js"></script>`.
+To utilize the functionalities within the `user_authentication` folder:
+1. Review the `validator.js` file to understand the validation rules and implement any necessary changes to suit the project requirements.
+2. Utilize the `auth.py` file to integrate user authentication processes into the system, ensuring secure access control mechanisms are in place.
 
-2. **auth.py**:
-   - Implement additional authentication features by extending the existing logic in this file.
-   - Integrate `auth.py` with your backend application to handle user authentication processes effectively.
+Ensure to follow best practices for user authentication and validation to enhance the security of the application.
 
 ---
 
@@ -28,35 +31,35 @@ The folder is organized to handle user authentication tasks efficiently. It cont
 **Purpose:** This file provides input validation utilities for user authentication, including email, password, and username validation, as well as a function to determine the strength of a password.
 
 **Key Components:**
-- `validateEmail(email)`: Validates the format of an email address.
-- `validatePassword(password)`: Validates the strength of a password based on length, uppercase, lowercase, and numbers.
-- `validateUsername(username)`: Validates the format of a username with alphanumeric and underscore characters.
-- `getPasswordStrength(password)`: Determines the strength of a password and returns a descriptive level.
+- `validateEmail(email)`: Validates an email address based on a regular expression.
+- `validatePassword(password)`: Validates a password based on specific criteria (at least 8 characters with uppercase, lowercase, and number).
+- `validateUsername(username)`: Validates a username based on length and character restrictions.
+- `getPasswordStrength(password)`: Determines the strength of a password based on length and character complexity.
 
 **Usage:** Import `InputValidator` class from this file to use the validation functions in your authentication logic.
 
-**Dependencies:** None.
+**Dependencies:** No external dependencies.
 
 ## auth.py
 
-**Purpose:** This file contains a user authentication system with login and registration functionality.
+**Purpose:** This file implements a user authentication system with login and registration functionality.
 
 **Key Components:**
-- `UserAuth`: Class that manages user authentication operations.
-  - `hash_password(password: str) -> str`: Hashes the password using SHA-256.
-  - `register_user(username: str, email: str, password: str) -> bool`: Registers a new user with a unique username, email, and password.
-  - `login(username: str, password: str) -> Optional[str]`: Authenticates the user with the provided username and password, returning a session token if successful.
-  - `logout(session_token: str) -> bool`: Ends the user session associated with the provided session token.
-  - `is_authenticated(session_token: str) -> bool`: Checks if the session token is valid and active.
+- `UserAuth`: Class that manages user registration, login, session handling, and authentication.
+- `hash_password()`: Method to hash a password using SHA-256.
+- `register_user()`: Method to register a new user with a unique username, email, and password.
+- `login()`: Method to authenticate a user with a username and password and generate a session token.
+- `logout()`: Method to end a user's session by invalidating the session token.
+- `is_authenticated()`: Method to check if a session token is valid and active.
 
 **Usage:** Instantiate the `UserAuth` class to utilize the user authentication functionalities provided in this file.
 
-**Dependencies:** 
+**Dependencies:**
 - `hashlib`: Used for hashing passwords.
-- `json`: Used for JSON serialization and deserialization.
-- `datetime`: Used for working with dates and times.
-- `timedelta`: Used for representing a duration of time.
-- `typing`: Used for type hints and annotations.
+- `json`: Not used directly in this file but imported.
+- `datetime`: Used for handling date and time operations.
+- `timedelta`: Used for calculating expiration time for session tokens.
+- `typing`: Used for type hinting.
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-17 21:03:22*
+*Auto-generated documentation - Last updated: 2025-07-17 21:03:47*
