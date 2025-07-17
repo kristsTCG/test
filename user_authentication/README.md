@@ -1,32 +1,26 @@
 # user_authentication
 
 ## Overview
-The `user_authentication` folder contains files related to user authentication functionalities within the project. It handles user validation and authentication processes.
+The `user_authentication` folder contains files related to user authentication functionalities in the project. This module is responsible for validating user input and managing user authentication using both JavaScript and Python.
 
 ## Structure
-The folder `user_authentication` contains two key files: `validator.js` written in JavaScript and `auth.py` written in Python. These files are responsible for user input validation and user authentication, respectively.
+The folder `user_authentication` contains the following files:
+- `validator.js`: A JavaScript file with 1212 characters that handles user input validation.
+- `auth.py`: A Python file with 2198 characters that manages user authentication processes.
 
 ## Key Files
-1. **validator.js**:
-   - Language: JavaScript
-   - Size: 1212 characters
-   - Role: Handles user input validation to ensure data integrity and security.
+### validator.js
+This file contains functions for validating user input, ensuring data integrity and security in the authentication process.
 
-2. **auth.py**:
-   - Language: Python
-   - Size: 2198 characters
-   - Role: Manages user authentication processes, such as login, logout, and session management.
+### auth.py
+The `auth.py` file is crucial for managing user authentication in the project. It handles user login, registration, and authentication processes using Python.
 
 ## Usage
-1. **validator.js**:
-   - To use the validation functions provided in `validator.js`, import the module into your JavaScript files using `require` or `import`.
-   - Call the appropriate validation functions on user input data to ensure it meets the required criteria.
+1. To utilize the validation functions in `validator.js`, import the necessary functions into your JavaScript files and call them as needed to validate user input.
 
-2. **auth.py**:
-   - To utilize the authentication functionalities in `auth.py`, import the module into your Python scripts.
-   - Use the provided functions for user login, logout, and session management as needed in your application.
+2. In Python scripts that require user authentication functionalities, import the `auth.py` module and utilize its functions for user login, registration, and authentication processes.
 
-Ensure to handle errors and exceptions appropriately when working with the authentication and validation processes in the `user_authentication` folder.
+3. Ensure that the functions in both files are used appropriately to maintain the security and integrity of user authentication processes in the project.
 
 ---
 
@@ -34,17 +28,17 @@ Ensure to handle errors and exceptions appropriately when working with the authe
 
 ## validator.js
 
-**Purpose:** This file provides input validation utilities for user authentication, including email, password, and username validation, as well as a function to determine password strength.
+**Purpose:** This file contains input validation utilities for user authentication, including validating email, password, and username inputs, as well as determining password strength.
 
 **Key Components:**
-- `validateEmail(email)`: Validates the format of an email address using a regular expression.
-- `validatePassword(password)`: Validates the strength of a password based on specific criteria.
-- `validateUsername(username)`: Validates the format of a username allowing only alphanumeric characters and underscores within a specified length range.
-- `getPasswordStrength(password)`: Determines the strength level of a password based on length and character complexity.
+- `validateEmail(email)`: Validates the format of an email address.
+- `validatePassword(password)`: Validates the strength of a password based on length, uppercase, lowercase, and numbers.
+- `validateUsername(username)`: Validates the format of a username with alphanumeric and underscore characters.
+- `getPasswordStrength(password)`: Determines the strength level of a password based on various criteria.
 
-**Usage:** This file can be imported into other JavaScript files using `require` or `import` statements to access the input validation functions provided by the `InputValidator` class.
+**Usage:** Import the `InputValidator` class from this file to use the validation functions in your authentication logic.
 
-**Dependencies:** This file does not have any external dependencies.
+**Dependencies:** No external dependencies.
 
 ## auth.py
 
@@ -54,18 +48,17 @@ Ensure to handle errors and exceptions appropriately when working with the authe
 - `UserAuth`: Class that manages user registration, login, and session handling.
 - `hash_password(password: str) -> str`: Method to hash a password using SHA-256.
 - `register_user(username: str, email: str, password: str) -> bool`: Method to register a new user.
-- `login(username: str, password: str) -> Optional[str]`: Method to authenticate a user and generate a session token.
+- `login(username: str, password: str) -> Optional[str]`: Method to authenticate a user and return a session token.
 - `logout(session_token: str) -> bool`: Method to end a user session.
-- `is_authenticated(session_token: str) -> bool`: Method to check if a session token is valid.
+- `is_authenticated(session_token: str) -> bool`: Method to check if a session is valid.
 
-**Usage:** Instantiate `UserAuth` to manage user authentication and session handling.
+**Usage:** This file can be imported to implement user authentication in Python applications.
 
 **Dependencies:**
 - `hashlib`: For hashing functions.
-- `json`: For JSON serialization.
-- `datetime`: For handling date and time.
-- `timedelta`: For time-based calculations.
+- `json`: For JSON serialization/deserialization.
+- `datetime`: For working with dates and times.
 - `typing`: For type hints.
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-17 23:15:30*
+*Auto-generated documentation - Last updated: 2025-07-17 23:15:57*
