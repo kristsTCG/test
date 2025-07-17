@@ -1,19 +1,26 @@
 # user_authentication
 
 ## Overview
-The `user_authentication` folder contains code related to user authentication functionalities within the project. This includes validation of user input and authentication processes.
+The `user_authentication` folder contains files related to user authentication functionality within the project. This functionality is responsible for validating user input and handling user authentication processes.
 
 ## Structure
-The folder is organized to handle user authentication tasks efficiently. It consists of two key files: `validator.js` written in JavaScript and `auth.py` written in Python.
+The folder `user_authentication` consists of two key files:
+- `validator.js`: A JavaScript file with 1212 characters that handles user input validation.
+- `auth.py`: A Python file with 2198 characters that manages user authentication processes.
 
 ## Key Files
-- `validator.js`: This JavaScript file contains functions for validating user input data. It plays a crucial role in ensuring that user-provided information meets the required criteria for authentication.
-- `auth.py`: The Python file `auth.py` is responsible for handling the authentication process. It manages user login, registration, and authentication logic within the project.
+### validator.js
+The `validator.js` file is crucial for ensuring that user input is validated before further processing. It contains functions and logic to validate user input data, such as email addresses, passwords, and other relevant information.
+
+### auth.py
+The `auth.py` file is essential for managing user authentication within the project. It handles processes such as user login, registration, password hashing, and token generation for secure authentication.
 
 ## Usage
-To utilize the functionalities provided in the `user_authentication` folder:
-1. Refer to `validator.js` for validating user input data before processing authentication requests.
-2. Use `auth.py` to implement user authentication processes such as login, registration, and authentication logic in the project.
+To utilize the functionality provided by the `user_authentication` folder, follow these steps:
+1. Use the functions defined in `validator.js` to validate user input data before processing.
+2. Implement the authentication processes defined in `auth.py` for user registration, login, and secure authentication within the project.
+
+Ensure that you integrate these files appropriately within your project to maintain secure and reliable user authentication functionality.
 
 ---
 
@@ -21,15 +28,15 @@ To utilize the functionalities provided in the `user_authentication` folder:
 
 ## validator.js
 
-**Purpose:** This file provides input validation utilities for user authentication, including email, password, and username validation, as well as a function to determine the strength of a password.
+**Purpose:** This file provides input validation utilities for user authentication, including email, password, and username validation, as well as password strength calculation.
 
 **Key Components:**
-- `validateEmail(email)`: Validates the format of an email address using a regular expression.
-- `validatePassword(password)`: Validates that a password meets specific criteria (at least 8 characters with uppercase, lowercase, and number).
-- `validateUsername(username)`: Validates that a username is 3-20 characters long, alphanumeric, and allows underscores.
+- `validateEmail(email)`: Validates an email address using a regular expression.
+- `validatePassword(password)`: Validates a password based on specific criteria (at least 8 characters with uppercase, lowercase, and number).
+- `validateUsername(username)`: Validates a username for length and allowed characters (alphanumeric and underscores).
 - `getPasswordStrength(password)`: Calculates the strength of a password based on length and character types.
 
-**Usage:** Import the `InputValidator` class from this file to use the validation functions in your authentication logic.
+**Usage:** To use this file, import `InputValidator` class from `validator.js` in your code.
 
 **Dependencies:** No external dependencies.
 
@@ -38,21 +45,21 @@ To utilize the functionalities provided in the `user_authentication` folder:
 **Purpose:** This file contains a user authentication system with login and registration functionality.
 
 **Key Components:**
-- `UserAuth`: Class that manages user authentication, registration, login, and session handling.
-- `hash_password`: Method to hash a password using SHA-256.
-- `register_user`: Method to register a new user with a unique username, email, and password.
-- `login`: Method to authenticate a user and generate a session token for active sessions.
-- `logout`: Method to end a user session by removing the session token from active sessions.
-- `is_authenticated`: Method to check if a session token is valid and not expired.
+- `UserAuth`: Class managing user authentication operations.
+  - `hash_password(password: str) -> str`: Hashes a password using SHA-256.
+  - `register_user(username: str, email: str, password: str) -> bool`: Registers a new user.
+  - `login(username: str, password: str) -> Optional[str]`: Authenticates a user and returns a session token.
+  - `logout(session_token: str) -> bool`: Ends a user session.
+  - `is_authenticated(session_token: str) -> bool`: Checks if a session token is valid.
 
-**Usage:** Instantiate the `UserAuth` class to manage user authentication in your Python application.
+**Usage:** Instantiate the `UserAuth` class to utilize the user authentication functionalities.
 
 **Dependencies:**
-- `hashlib`: Used for hashing passwords.
-- `json`: Not currently used but imported.
-- `datetime`: Used for handling date and time operations.
-- `timedelta`: Used for calculating expiration time for session tokens.
-- `typing`: Used for type hints in function definitions.
+- `hashlib`: For hashing functions.
+- `json`: For JSON handling.
+- `datetime`: For date and time operations.
+- `timedelta`: For time duration calculations.
+- `typing`: For type hints.
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-17 17:36:43*
+*Auto-generated documentation - Last updated: 2025-07-17 17:37:08*
