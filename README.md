@@ -1,16 +1,16 @@
 # Folder Documentation
 
 ## Overview
-This folder contains a Python script named `test_code.py`. The purpose of this folder is to house the code related to a specific functionality or feature within the project.
+This folder contains a single Python file, `test_code.py`, which plays a crucial role in the project's functionality.
 
 ## Structure
-The folder consists of a single Python file, `test_code.py`, which contains the implementation code for the functionality it represents.
+The folder is organized with a single Python file, `test_code.py`, which contains 2127 characters of code.
 
 ## Key Files
-- **test_code.py**: This file is the main Python script in this folder, containing 2127 characters of code. It plays a crucial role in implementing a specific feature or functionality within the project.
+- `test_code.py`: This file is the main script for the project and contains the core logic and functionality.
 
 ## Usage
-To work with the code in this folder, you can open the `test_code.py` file in a Python IDE or text editor to view and modify the code. You can run the script using a Python interpreter to execute the functionality it provides. Make sure to follow any specific instructions or guidelines provided within the code comments or documentation for proper usage.
+To work with the code in this folder, you can open `test_code.py` in a Python IDE or text editor to view and modify the code as needed. Make sure to follow any instructions or guidelines provided within the file for proper usage.
 
 ---
 
@@ -26,11 +26,12 @@ To work with the code in this folder, you can open the `test_code.py` file in a 
   - `get_user_by_id(user_id)`: Finds a user by ID.
   - `find_user_by_email(email)`: Finds a user by email address.
   - `get_active_users()`: Retrieves all active users.
-  - `deactivate_user(user_id)`: Deactivates a user without deletion.
+  - `deactivate_user(user_id)`: Deactivates a user without deleting.
+- Example usage to demonstrate adding users, searching by email, and deactivating users.
 
-**Usage:** The file can be used by importing it into other Python scripts to manage user data.
+**Usage:** This file can be used by importing the `UserManager` class and creating an instance to manage users in a system.
 
-**Dependencies:** No external dependencies are required for this file.
+**Dependencies:** None.
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-17 20:43:12*
+*Auto-generated documentation - Last updated: 2025-07-17 20:43:34*
