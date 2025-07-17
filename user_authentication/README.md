@@ -4,19 +4,31 @@
 The `user_authentication` folder contains files related to user authentication functionality within the project. This includes validation of user input and authentication processes.
 
 ## Structure
-The folder is organized to handle user authentication tasks efficiently. It contains two key files: `validator.js` written in JavaScript and `auth.py` written in Python.
+The folder is organized to handle user authentication tasks efficiently. It includes two key files, `validator.js` written in JavaScript for client-side validation, and `auth.py` written in Python for server-side authentication.
 
 ## Key Files
-- `validator.js`: This JavaScript file is 1212 characters long and is responsible for validating user input data related to authentication. It ensures that the data provided by users meets the required criteria for authentication.
-  
-- `auth.py`: This Python file is 2198 characters long and handles the authentication logic for users. It manages user login, registration, and authentication processes within the system.
+1. **validator.js**
+   - Role: Responsible for client-side input validation.
+   - Size: 1212 characters
+   - Language: JavaScript
+
+2. **auth.py**
+   - Role: Handles server-side authentication processes.
+   - Size: 2198 characters
+   - Language: Python
 
 ## Usage
-To work with the code in this folder, follow these steps:
-1. Review the `validator.js` file to understand the validation rules for user input data.
-2. Explore the `auth.py` file to understand the authentication logic implemented in Python.
-3. Use the functions and methods defined in these files to integrate user authentication features into the project.
-4. Ensure to handle errors and exceptions effectively to provide a seamless authentication experience for users.
+1. **validator.js**
+   - Ensure the necessary JavaScript dependencies are included in your project.
+   - Use the functions provided in `validator.js` to validate user input on the client-side.
+   - Customize the validation rules as needed for your project requirements.
+
+2. **auth.py**
+   - Integrate `auth.py` into your server-side codebase.
+   - Utilize the authentication functions provided to authenticate users securely.
+   - Implement additional security measures as required for your application.
+
+By following the guidelines outlined in the documentation, you can effectively leverage the user authentication functionalities provided in the `user_authentication` folder for your project.
 
 ---
 
@@ -24,21 +36,21 @@ To work with the code in this folder, follow these steps:
 
 ## validator.js
 
-**Purpose:** This file provides input validation utilities for user authentication, including email, password, and username validation, as well as a function to determine the strength of a password.
+**Purpose:** This file provides input validation utilities for user authentication, including validating email, password, and username formats, as well as determining password strength.
 
 **Key Components:**
 - `validateEmail(email)`: Validates the format of an email address.
 - `validatePassword(password)`: Validates the strength of a password based on specific criteria.
 - `validateUsername(username)`: Validates the format of a username.
-- `getPasswordStrength(password)`: Determines the strength level of a password.
+- `getPasswordStrength(password)`: Determines the strength level of a password based on various criteria.
 
-**Usage:** Import `InputValidator` class from this file to use the validation functions in your authentication logic.
+**Usage:** To use this file, import `InputValidator` class where input validation is needed and call the relevant methods on it.
 
-**Dependencies:** None.
+**Dependencies:** No external dependencies.
 
 ## auth.py
 
-**Purpose:** This file contains a user authentication system with login and registration functionality.
+**Purpose:** This file implements a user authentication system with login and registration functionality.
 
 **Key Components:**
 - `UserAuth`: Class that manages user registration, login, and session handling.
@@ -52,10 +64,10 @@ To work with the code in this folder, follow these steps:
 
 **Dependencies:**
 - `hashlib`: For hashing passwords.
-- `json`: For handling JSON data.
+- `json`: For JSON serialization.
 - `datetime`: For working with dates and times.
 - `timedelta`: For calculating time differences.
 - `typing`: For type hints.
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-17 15:38:23*
+*Auto-generated documentation - Last updated: 2025-07-17 15:38:45*
