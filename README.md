@@ -1,16 +1,22 @@
 # Folder Documentation
 
 ## Overview
-This folder contains a single Python file named `test_code.py`. The purpose of this folder is to house the code for a specific functionality or feature within the project.
+This folder contains a Python script named `test_code.py` with 2127 characters. The purpose of this folder in the project is to house the code for a specific functionality or feature.
 
 ## Structure
-The folder structure is simple with only one Python file present. The file `test_code.py` is the main component of this folder and holds the code implementation for a particular feature.
+The folder consists of a single Python script file, `test_code.py`, which contains the code for the functionality being implemented.
 
 ## Key Files
-- `test_code.py`: This file is the main Python script in this folder, consisting of 2127 characters. It contains the code implementation for a specific functionality within the project.
+- `test_code.py`: This file is the main Python script in the folder, containing the code implementation for a specific feature or functionality in the project.
 
 ## Usage
-To work with the code in this folder, you can open the `test_code.py` file in a Python IDE or text editor to view and modify the code. Make sure to follow any specific instructions or guidelines provided within the file comments or documentation. You can run the code by executing the Python script using a Python interpreter.
+To work with the code in this folder, you can:
+1. Open the `test_code.py` file in a Python IDE or text editor.
+2. Review the code to understand the implementation details.
+3. Make any necessary modifications or additions to the code as required for the project.
+4. Run the `test_code.py` script to test the functionality it provides.
+
+Ensure that any changes made to the code are in line with the project requirements and coding standards.
 
 ---
 
@@ -28,9 +34,9 @@ To work with the code in this folder, you can open the `test_code.py` file in a 
   - `get_active_users()`: Get all active users
   - `deactivate_user(user_id)`: Deactivate a user instead of deleting
 
-**Usage:** Run the file to create a `UserManager` instance and interact with user management functionalities.
+**Usage:** Run the file to create a `UserManager` instance and test user management functionalities. Example usage includes adding users, finding users by email, and deactivating users.
 
 **Dependencies:** None
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-17 19:34:48*
+*Auto-generated documentation - Last updated: 2025-07-17 19:35:12*
