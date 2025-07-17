@@ -1,16 +1,20 @@
 # Folder Documentation
 
 ## Overview
-This folder contains a single Python file, `test_code.py`, which is an integral part of the project.
+This folder contains a single Python file, `test_code.py`, which is an integral part of the project. The file likely contains code for testing purposes or sample code snippets.
 
 ## Structure
-The folder is structured with a single Python file, `test_code.py`, which likely contains code related to testing or demonstration purposes.
+The folder structure is simple, with only one Python file present. This file is expected to contain functions, classes, or test cases relevant to the project's functionality.
 
 ## Key Files
-- `test_code.py`: This file is the main component of this folder, containing 2127 characters of Python code. It is essential for testing functionalities or demonstrating features within the project.
+- `test_code.py`: This file is the main component of the folder and plays a crucial role in the project. It may contain test cases, sample code, or utility functions.
 
 ## Usage
-To work with the code in this folder, you can open `test_code.py` in a Python IDE or text editor to review, modify, or execute the code as needed. Ensure you have the necessary dependencies installed before running the code.
+To work with the code in this folder:
+1. Open the `test_code.py` file in a Python editor or IDE.
+2. Review the code to understand its purpose and functionality.
+3. Make necessary modifications or additions to the code as required for testing or development purposes.
+4. Execute the code to observe the results and ensure it functions as intended.
 
 ---
 
@@ -28,9 +32,9 @@ To work with the code in this folder, you can open `test_code.py` in a Python ID
 - `get_active_users()`: Method to retrieve all active users.
 - `deactivate_user(user_id)`: Method to deactivate a user instead of deleting.
 
-**Usage:** To use this file, create an instance of `UserManager` and call its methods to manage users.
+**Usage:** Run the file to create a `UserManager` instance and use its methods to manage users. Example usage is provided at the end of the file.
 
-**Dependencies:** No external dependencies.
+**Dependencies:** None.
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-17 17:18:55*
+*Auto-generated documentation - Last updated: 2025-07-17 17:19:17*
