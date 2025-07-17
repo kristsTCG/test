@@ -4,13 +4,13 @@
 This folder contains a single Python file, `test_code.py`, which is a part of the project's codebase. The purpose of this folder is to house the code for a specific functionality or feature within the project.
 
 ## Structure
-The folder has a simple structure with only one Python file present. The file `test_code.py` is responsible for implementing a particular set of functionalities related to a specific aspect of the project.
+The folder consists of a single Python file, `test_code.py`, which contains the implementation of a particular feature or functionality. The code within this file is structured and organized to achieve the desired outcome efficiently.
 
 ## Key Files
-- `test_code.py`: This is the main file in the folder, containing 2127 characters of Python code. It plays a crucial role in implementing a specific feature or functionality within the project.
+- `test_code.py`: This file is the main component of this folder and contains the implementation of a specific feature or functionality. It plays a crucial role in the project and is essential for the overall functionality of the system.
 
 ## Usage
-To work with the code in this folder, you can open the `test_code.py` file in a Python IDE or text editor. You can review, modify, or run the code as needed to understand or enhance the functionality it provides. Make sure to follow any coding conventions or guidelines set by the project to maintain consistency across the codebase.
+To work with the code in this folder, you can open the `test_code.py` file in a Python IDE or text editor to view and modify the code. Make sure to follow any specific instructions or guidelines provided within the file or project documentation. You can run the code to test its functionality and integrate it with other parts of the project as needed.
 
 ---
 
@@ -26,12 +26,11 @@ To work with the code in this folder, you can open the `test_code.py` file in a 
   - `get_user_by_id(user_id)`: Finds a user by ID.
   - `find_user_by_email(email)`: Finds a user by email address.
   - `get_active_users()`: Retrieves all active users.
-  - `deactivate_user(user_id)`: Deactivates a user without deleting.
-- Example usage to demonstrate adding users, finding users by email, and deactivating users.
+  - `deactivate_user(user_id)`: Deactivates a user.
 
-**Usage:** Run the file to create a `UserManager` instance and test user management functionalities. Modify the example usage section for custom testing scenarios.
+**Usage:** The file can be used by importing the `UserManager` class and creating an instance to manage users. Example usage is provided at the end of the file.
 
 **Dependencies:** None.
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-17 18:41:37*
+*Auto-generated documentation - Last updated: 2025-07-17 18:42:00*
