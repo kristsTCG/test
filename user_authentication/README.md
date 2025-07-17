@@ -1,21 +1,25 @@
 # user_authentication
 
 ## Overview
-The `user_authentication` folder contains files related to user authentication functionalities within the project. This includes validation of user input and authentication logic.
+The `user_authentication` folder contains files related to user authentication functionality within the project. This module handles user validation and authentication processes.
 
 ## Structure
-The folder is organized with two key files: `validator.js` written in JavaScript and `auth.py` written in Python. These files handle user input validation and authentication processes respectively.
+The folder is organized to manage user authentication tasks efficiently. It includes validator.js for client-side validation and auth.py for server-side authentication logic.
 
 ## Key Files
-- **validator.js**: This file contains functions for validating user input data. It plays a crucial role in ensuring that user-provided information meets the required criteria before proceeding with authentication.
-  
-- **auth.py**: The `auth.py` file is responsible for handling user authentication processes. It includes functions for verifying user credentials and managing user sessions.
+- **validator.js**: This JavaScript file contains client-side validation logic for user input. It ensures that user-provided data meets the required criteria before submission.
+- **auth.py**: The Python file `auth.py` is responsible for server-side authentication tasks. It manages user authentication, login, and session handling.
 
 ## Usage
-To utilize the functionalities provided in this folder:
-1. Review the `validator.js` file to understand the validation rules and functions available for user input.
-2. Explore the `auth.py` file to implement user authentication logic in your project.
-3. Ensure to integrate these files with other parts of the project that require user authentication capabilities.
+1. **validator.js**:
+   - Modify the validation rules as needed to match the project's requirements.
+   - Include `validator.js` in your HTML files using `<script>` tags to enable client-side validation.
+
+2. **auth.py**:
+   - Integrate the authentication logic with your backend server.
+   - Use the functions provided in `auth.py` to authenticate users and manage their sessions securely.
+
+Ensure that both client-side and server-side authentication processes are synchronized to provide a seamless user experience.
 
 ---
 
@@ -23,17 +27,17 @@ To utilize the functionalities provided in this folder:
 
 ## validator.js
 
-**Purpose:** This file provides input validation utilities for user authentication, including email, password, and username validation, as well as a function to determine password strength.
+**Purpose:** This file provides input validation utilities for user authentication, including validating email, password, and username inputs, as well as determining password strength.
 
 **Key Components:**
-- `validateEmail(email)`: Validates an email address format using a regular expression.
-- `validatePassword(password)`: Validates a password format requiring at least 8 characters with uppercase, lowercase, and a number.
-- `validateUsername(username)`: Validates a username format requiring 3-20 characters, alphanumeric characters, and underscores only.
-- `getPasswordStrength(password)`: Calculates the strength of a password based on length and character complexity.
+- `validateEmail(email)`: Validates if the input email is in a valid format.
+- `validatePassword(password)`: Validates if the input password meets the specified criteria.
+- `validateUsername(username)`: Validates if the input username meets the specified criteria.
+- `getPasswordStrength(password)`: Determines the strength level of the input password based on certain criteria.
 
-**Usage:** Import the `InputValidator` class from this file to use the validation functions in your authentication logic.
+**Usage:** Import the `InputValidator` class from this file to use the provided validation functions in your authentication logic.
 
-**Dependencies:** This file does not have any external dependencies.
+**Dependencies:** None.
 
 ## auth.py
 
@@ -57,4 +61,4 @@ To utilize the functionalities provided in this folder:
 - `typing`: For type hints and annotations.
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-17 20:56:44*
+*Auto-generated documentation - Last updated: 2025-07-17 20:57:04*
