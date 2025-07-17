@@ -1,29 +1,29 @@
 # user_authentication
 
 ## Overview
-The `user_authentication` folder contains files related to user authentication functionalities within the project. This module is responsible for validating user input and handling user authentication processes.
+The `user_authentication` folder contains files related to user authentication functionalities within the project. This module is responsible for validating user input and handling authentication processes.
 
 ## Structure
 The folder `user_authentication` consists of two key files:
-- `validator.js`: A JavaScript file with 1212 characters, responsible for validating user input data.
-- `auth.py`: A Python file with 2198 characters, handling user authentication processes.
+- `validator.js`: A JavaScript file with 1212 characters, responsible for input validation.
+- `auth.py`: A Python file with 2198 characters, handling user authentication logic.
 
 ## Key Files
 ### validator.js
-- **Role**: Validates user input data to ensure it meets the required criteria.
+- **Role**: Responsible for validating user input.
 - **Character Count**: 1212
-- **Usage**: Used to validate user input such as email addresses, passwords, and other relevant data.
+- **Usage**: Ensures that user input meets specified criteria before proceeding with authentication processes.
 
 ### auth.py
-- **Role**: Manages user authentication processes such as login, registration, and authentication.
+- **Role**: Manages user authentication processes.
 - **Character Count**: 2198
-- **Usage**: Contains functions for user registration, login, and authentication processes.
+- **Usage**: Implements authentication logic such as user login, registration, and session management.
 
 ## Usage
-1. To utilize the validation functionality, refer to the `validator.js` file and import the necessary functions into your project.
-2. For user authentication processes, utilize the functions provided in the `auth.py` file to handle user registration, login, and authentication.
+1. To utilize the input validation functionality, refer to `validator.js`. Modify the validation rules as needed to suit the project requirements.
+2. For user authentication processes, interact with `auth.py`. Implement user login, registration, and session management using the provided functions and methods.
 
-Ensure to follow the defined structure and guidelines within the respective files for seamless integration and usage within the project.
+Ensure to integrate these files into the project's authentication flow for secure and reliable user authentication.
 
 ---
 
@@ -34,35 +34,35 @@ Ensure to follow the defined structure and guidelines within the respective file
 **Purpose:** This file provides input validation utilities for user authentication, including email, password, and username validation, as well as password strength assessment.
 
 **Key Components:**
-- `validateEmail(email)`: Validates an email address using a regular expression.
-- `validatePassword(password)`: Validates a password based on specific criteria (length, uppercase, lowercase, and number requirements).
-- `validateUsername(username)`: Validates a username for length and character restrictions.
-- `getPasswordStrength(password)`: Calculates the strength of a password based on various criteria and returns a descriptive level.
+- `validateEmail(email)`: Validates the format of an email address.
+- `validatePassword(password)`: Validates the strength of a password based on specific criteria.
+- `validateUsername(username)`: Validates the format of a username.
+- `getPasswordStrength(password)`: Calculates the strength level of a password based on length and character requirements.
 
-**Usage:** Import the `InputValidator` class from this file to use the validation functions in your authentication logic.
+**Usage:** Import `InputValidator` class from this file to use the validation functions in your authentication logic.
 
-**Dependencies:** This file does not have any external dependencies.
+**Dependencies:** No external dependencies.
 
 ## auth.py
 
-**Purpose:** This file implements a user authentication system with login and registration functionality.
+**Purpose:** This file contains a user authentication system with login and registration functionality.
 
 **Key Components:**
-- `UserAuth`: Class that manages user registration, login, and session handling.
-- `hash_password`: Method to hash a password using SHA-256.
-- `register_user`: Method to register a new user with a unique username, email, and password.
-- `login`: Method to authenticate a user with a username and password and generate a session token.
-- `logout`: Method to end a user session by deleting the session token.
-- `is_authenticated`: Method to check if a session token is valid and active.
+- `UserAuth`: Class that manages user registration, login, session handling, and authentication.
+    - `hash_password(password: str) -> str`: Hashes a password using SHA-256.
+    - `register_user(username: str, email: str, password: str) -> bool`: Registers a new user with a unique username, email, and password.
+    - `login(username: str, password: str) -> Optional[str]`: Authenticates a user and returns a session token.
+    - `logout(session_token: str) -> bool`: Ends a user session based on the session token.
+    - `is_authenticated(session_token: str) -> bool`: Checks if a session token is valid.
 
-**Usage:** Instantiate `UserAuth` to manage user authentication operations. Call `register_user` to create a new user, `login` to authenticate and get a session token, `logout` to end a session, and `is_authenticated` to verify the validity of a session token.
+**Usage:** Instantiate the `UserAuth` class to manage user authentication and session handling.
 
-**Dependencies:** 
-- `hashlib`: for hashing functions.
-- `json`: for JSON handling.
-- `datetime`: for date and time operations.
-- `timedelta`: for time duration calculations.
-- `typing`: for type hints.
+**Dependencies:**
+- `hashlib`: For hashing functions.
+- `json`: For JSON serialization and deserialization.
+- `datetime`: For date and time operations.
+- `timedelta`: For calculating time differences.
+- `typing`: For type hinting.
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-17 21:29:30*
+*Auto-generated documentation - Last updated: 2025-07-17 21:29:52*
