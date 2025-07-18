@@ -1,16 +1,16 @@
 # Folder Documentation
 
 ## Overview
-This folder contains a single Python file, `test_code.py`, which serves a specific purpose within the project.
+This folder contains a Python script named `test_code.py` with 2127 characters. The purpose of this script is to perform a specific function within the project.
 
 ## Structure
-The folder is organized with a single Python file at the root level.
+The folder consists of a single Python script file, `test_code.py`.
 
 ## Key Files
-- `test_code.py`: This file contains 2127 characters of Python code and is the main script for testing a specific functionality within the project.
+- `test_code.py`: This file is the main script in this folder and contains the code for a specific functionality. It plays a crucial role in the project.
 
 ## Usage
-To work with the code in this folder, you can open `test_code.py` in a Python IDE or text editor to review, modify, or run the code. Make sure to follow any instructions or comments within the file to understand its functionality and purpose.
+To work with the code in this folder, you can open the `test_code.py` file in a Python IDE or text editor to view and modify the code as needed. Make sure to follow any specific instructions or guidelines provided within the script for proper usage.
 
 ---
 
@@ -28,9 +28,9 @@ To work with the code in this folder, you can open `test_code.py` in a Python ID
   - `get_active_users()`: Retrieves all active users
   - `deactivate_user(user_id)`: Deactivates a user instead of deleting
 
-**Usage:** This file can be used by importing it into other Python scripts to manage user data for testing AI analysis.
+**Usage:** This file can be used by importing the `UserManager` class and creating an instance to manage users. It provides methods to add, find, get, and deactivate users.
 
 **Dependencies:** No external dependencies.
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-18 00:15:11*
+*Auto-generated documentation - Last updated: 2025-07-18 00:15:33*
