@@ -1,20 +1,19 @@
 # user_authentication
 
 ## Overview
-The `user_authentication` folder contains files related to user authentication functionality within the project. It handles user validation and authentication processes.
+The `user_authentication` folder contains files related to user authentication functionalities within the project. These files handle user validation and authentication processes.
 
 ## Structure
-The folder is organized to manage user authentication tasks efficiently. It includes two key files: `validator.js` written in JavaScript and `auth.py` written in Python.
+The folder is organized to separate the validation logic implemented in JavaScript and the authentication logic implemented in Python.
 
 ## Key Files
-- **validator.js**: This JavaScript file contains 1212 characters and is responsible for validating user input data for authentication purposes.
-- **auth.py**: This Python file contains 2198 characters and handles the authentication logic for users within the system.
+- `validator.js`: This JavaScript file contains the user validation logic, consisting of 1212 characters. It is responsible for validating user input data.
+- `auth.py`: This Python file contains the user authentication logic, consisting of 2198 characters. It handles user authentication processes, such as login and logout functionalities.
 
 ## Usage
-To work with the code in this folder:
-1. Review `validator.js` to understand how user input data is validated.
-2. Examine `auth.py` to understand the authentication logic implemented for users.
-3. Make necessary modifications or enhancements to the authentication process as needed.
+1. To work with the user validation logic, refer to `validator.js`. Modify the validation rules as needed to ensure secure user input handling.
+2. For user authentication processes, utilize `auth.py`. Implement login and logout functionalities based on the project requirements.
+3. Ensure to maintain the integrity of the authentication and validation processes to enhance the security of user interactions within the project.
 
 ---
 
@@ -25,14 +24,14 @@ To work with the code in this folder:
 **Purpose:** This file provides input validation utilities for user authentication, including email, password, and username validation, as well as password strength assessment.
 
 **Key Components:**
-- `validateEmail(email)`: Validates an email address using a regular expression.
-- `validatePassword(password)`: Validates a password based on length and character requirements.
-- `validateUsername(username)`: Validates a username for length and allowed characters.
-- `getPasswordStrength(password)`: Calculates the strength of a password based on length and character complexity.
+- `validateEmail(email)`: Validates the format of an email address.
+- `validatePassword(password)`: Validates that a password meets specific criteria (at least 8 characters with uppercase, lowercase, and number).
+- `validateUsername(username)`: Validates the format of a username (3-20 characters, alphanumeric and underscores only).
+- `getPasswordStrength(password)`: Calculates the strength of a password based on length and character types.
 
-**Usage:** Import `InputValidator` class from this file to use the provided validation methods in your authentication logic.
+**Usage:** Import the `InputValidator` class from this file and use its static methods for input validation and password strength assessment.
 
-**Dependencies:** No external dependencies.
+**Dependencies:** None.
 
 ## auth.py
 
@@ -46,14 +45,14 @@ To work with the code in this folder:
 - `logout`: Method to end a user's session.
 - `is_authenticated`: Method to check if a session token is valid.
 
-**Usage:** Instantiate the `UserAuth` class to manage user authentication processes.
+**Usage:** Instantiate the `UserAuth` class to utilize the user authentication functionalities provided in this file.
 
-**Dependencies:** 
+**Dependencies:**
 - `hashlib`: For hashing passwords.
-- `json`: For handling JSON data.
-- `datetime`: For working with dates and times.
+- `json`: For working with JSON data.
+- `datetime`: For handling date and time operations.
 - `timedelta`: For calculating time differences.
-- `typing`: For type hints.
+- `typing`: For type hints in function definitions.
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-18 07:15:01*
+*Auto-generated documentation - Last updated: 2025-07-18 07:15:23*
