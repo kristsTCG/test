@@ -1,16 +1,22 @@
 # Folder Documentation
 
 ## Overview
-This folder contains a Python script named `test_code.py` which plays a significant role in the project. The script is 2127 characters long and is crucial for the functionality of the software project.
+This folder contains a single Python file named `test_code.py`. The purpose of this folder is to store the code related to testing functionalities within the project.
 
 ## Structure
-The folder consists of a single Python script, `test_code.py`, which is the main component of this directory. The script contains the code necessary for a specific functionality within the project.
+The folder structure is simple, with only one Python file present. The file `test_code.py` is responsible for executing various test cases to ensure the functionality of the project.
 
 ## Key Files
-- `test_code.py`: This file is the main script in this folder and contains the code implementation for a specific feature or functionality in the project. It is essential for the proper functioning of the software.
+- `test_code.py`: This file contains the test cases that validate the functionality of the project. It plays a crucial role in maintaining the quality and reliability of the software.
 
 ## Usage
-To work with the code in this folder, you can open the `test_code.py` file in a Python IDE or text editor to view and modify the code. Make sure to follow any guidelines or comments within the script to understand its purpose and functionality. You can run the script using a Python interpreter to execute the code and observe the output or behavior as intended.
+To work with the code in this folder, you can:
+1. Open the `test_code.py` file in a Python IDE or text editor.
+2. Review the test cases implemented within the file to understand the expected behavior of the project.
+3. Execute the test cases to verify that the project functions as intended.
+4. Make any necessary modifications to the test cases to accommodate changes in the project code.
+
+Ensure that you follow best practices for testing and maintain the integrity of the test suite to support the overall quality of the software project.
 
 ---
 
@@ -18,7 +24,7 @@ To work with the code in this folder, you can open the `test_code.py` file in a 
 
 ## test_code.py
 
-**Purpose:** This file contains a simple user management system for testing AI analysis. It allows adding users with email validation, finding users by ID or email, retrieving active users, and deactivating users without deleting them.
+**Purpose:** This file contains a simple user management system for testing AI analysis. It allows adding users with email validation, finding users by ID or email, getting active users, and deactivating users without deleting them.
 
 **Key Components:**
 - `UserManager`: Class for managing users
@@ -26,11 +32,11 @@ To work with the code in this folder, you can open the `test_code.py` file in a 
   - `get_user_by_id(user_id)`: Finds a user by ID
   - `find_user_by_email(email)`: Finds a user by email address
   - `get_active_users()`: Retrieves all active users
-  - `deactivate_user(user_id)`: Deactivates a user
+  - `deactivate_user(user_id)`: Deactivates a user without deleting
 
-**Usage:** To use this file, you can import the `UserManager` class and create an instance of it to manage users in your application.
+**Usage:** Run the file to create a `UserManager` instance and use its methods to manage users. Example usage is provided at the end of the file.
 
-**Dependencies:** No external dependencies are required for this file.
+**Dependencies:** None
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-18 01:46:30*
+*Auto-generated documentation - Last updated: 2025-07-18 01:46:53*
