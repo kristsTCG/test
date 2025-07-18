@@ -73,7 +73,7 @@ class READMEGenerator:
             file_type = self.supported_extensions.get(file_path.suffix.lower(), 'Code')
             
             prompt = f"""
-Analyze this {file_type} file and provide comprehensive enterprise-level documentation:
+Analyze this {file_type} file and provide comprehensive enterprise-level documentation focused on THIS SPECIFIC FILE:
 
 File: {file_path.name}
 Content:
@@ -85,60 +85,69 @@ Provide detailed documentation in this format:
 
 ### 📊 Business Context & Impact
 **Business Problem Statement:**
-- What specific business challenge this code solves
-- Current pain points it addresses
-- Value delivered to the organization
+- What specific business challenge THIS FILE solves
+- Current pain points THIS CODE addresses  
+- Value delivered by THIS PARTICULAR FILE to the organization
+- Who uses THIS SPECIFIC functionality and why
 
 **Stakeholder Analysis:**
-- Primary users and their needs
-- Secondary stakeholders who benefit
-- Business processes this integrates with
+- Primary users of THIS FILE's functionality
+- Business processes that depend on THIS CODE
+- How THIS FILE fits into larger business workflows
+- Compliance or regulatory requirements THIS CODE addresses
 
-### 🏗️ Technical Architecture
+### 🏗️ Technical Architecture  
 **System Design:**
-- Architecture pattern and design principles used
-- Technology stack and dependencies
-- Integration points with other systems
+- Architecture pattern used in THIS FILE
+- Design principles applied in THIS CODE
+- Technology stack and dependencies for THIS FILE
+- How THIS FILE integrates with other system components
 
 **Data Architecture:**
-- Data models and structures used
-- Database interactions and persistence
-- Data validation and business rules
+- Data models and structures used in THIS FILE
+- Database interactions performed by THIS CODE
+- Data validation and business rules in THIS FILE
+- Input/output specifications for THIS FILE
 
 **Performance & Scalability:**
-- Performance characteristics
-- Scalability considerations
-- Optimization strategies
+- Performance characteristics of THIS CODE
+- Scalability considerations for THIS FILE
+- Resource usage (memory, CPU) of THIS IMPLEMENTATION
+- Optimization strategies used in THIS FILE
 
 ### 💻 Code Implementation Details
 **Function/Class Documentation:**
-- Detailed breakdown of main components
-- Input/output specifications with examples
-- Error handling and exception management
-- Side effects and external interactions
+- Detailed breakdown of each function/class in THIS FILE
+- Input parameters and return values for each component
+- Error handling and exception management in THIS CODE
+- Side effects and external interactions of THIS FILE
 
 **Code Examples & Usage:**
-- Basic usage examples
-- Integration scenarios
-- Common patterns and best practices
+- How to use THIS SPECIFIC FILE
+- Integration examples with THIS CODE
+- Common patterns and best practices in THIS FILE
+- Real-world usage scenarios for THIS FUNCTIONALITY
 
 **Security & Compliance:**
-- Security measures implemented
-- Data protection considerations
-- Compliance requirements addressed
+- Security measures implemented in THIS FILE
+- Data protection considerations in THIS CODE
+- Access controls and validation in THIS FILE
+- Audit trails and logging in THIS IMPLEMENTATION
 
 ### 🔧 Operations & Maintenance
 **Deployment Considerations:**
-- Environment requirements
-- Configuration needs
-- Monitoring and health checks
+- Environment requirements for THIS FILE
+- Configuration needs for THIS CODE
+- Dependencies required by THIS FILE
+- Monitoring points for THIS FUNCTIONALITY
 
 **Troubleshooting:**
-- Common issues and solutions
-- Performance tuning recommendations
-- Maintenance requirements
+- Common issues with THIS FILE
+- Performance problems in THIS CODE
+- Error patterns in THIS IMPLEMENTATION
+- Maintenance tasks for THIS FILE
 
-Provide detailed, professional documentation suitable for enterprise environments.
+Focus on THIS SPECIFIC FILE only - provide deep, detailed analysis of what this particular code file does for the business and how it's technically implemented.
 """
 
             response = requests.post(
@@ -216,7 +225,7 @@ Provide detailed, professional documentation suitable for enterprise environment
             ])
             
             prompt = f"""
-Analyze this code folder and provide comprehensive enterprise-level documentation:
+Analyze this code folder and provide a clear overview:
 
 Folder: {folder_path.name if folder_path.name != '.' else 'Root Directory'}
 Path: {folder_path}
@@ -224,65 +233,28 @@ Path: {folder_path}
 Files in this folder:
 {files_summary}
 
-Provide detailed documentation in this format:
+Provide documentation in this format:
 
 # {folder_path.name if folder_path.name != '.' else folder_path.absolute().name}
 
-## 📊 Business Context & Impact
+## 📁 Folder Overview
+Brief description of what this folder contains and its overall purpose in the project.
 
-### Business Problem Statement
-Explain what business challenges this module/system solves, the value it delivers, and why it exists.
+## 🎯 Business Purpose
+What business functionality this module provides and why it exists.
 
-### Stakeholder Analysis  
-- **Primary Users:** Who directly interacts with this functionality
-- **Business Processes:** How this integrates into larger business workflows
-- **Success Metrics:** How business value is measured
+## 📋 File Structure
+Overview of the files in this folder and their relationships:
 
-## 🏗️ Technical Architecture
+{chr(10).join([f"- **{info['name']}** - {info['type']} file" for info in files_info[:10]])}
 
-### System Design
-- **Architecture Pattern:** How the code is structured and organized
-- **Technology Stack:** Languages, frameworks, libraries used
-- **Design Principles:** SOLID, DRY, separation of concerns applied
+## 🚀 Getting Started
+Basic information about how to use or work with the code in this folder.
 
-### Data Architecture
-- **Data Models:** How information is structured and managed
-- **Integration Points:** Connections to databases, APIs, external systems
-- **Data Flow:** How information moves through the system
+## 🔗 Dependencies & Integration
+How this folder/module connects to other parts of the system.
 
-### Performance & Scalability
-- **Performance Characteristics:** Speed, throughput, resource usage
-- **Scalability Considerations:** How it handles growth and load
-- **Optimization Strategies:** Techniques used for efficiency
-
-## 💻 Implementation Overview
-
-### Key Components
-Detailed breakdown of main files and their roles in the system.
-
-### Code Organization
-- **Directory Structure:** How files are organized and why
-- **Naming Conventions:** Standards followed throughout
-- **Common Patterns:** Reusable patterns and practices
-
-### Integration & Usage
-- **How to Use:** Getting started with this module
-- **Dependencies:** What this code requires to function
-- **API/Interface:** How other systems interact with this
-
-## 🔧 Operations & Maintenance
-
-### Deployment Considerations
-- **Environment Requirements:** What's needed to run this code
-- **Configuration:** Settings and parameters to configure
-- **Monitoring:** What to watch for operational health
-
-### Development Guidelines
-- **Contributing:** How to modify and extend this code
-- **Testing:** Testing strategies and requirements
-- **Best Practices:** Standards to follow when working with this code
-
-Provide professional, enterprise-grade documentation suitable for technical and business stakeholders.
+Keep this as a high-level overview - detailed documentation for each file is provided below in the individual file sections.
 """
 
             response = requests.post(
