@@ -73,26 +73,72 @@ class READMEGenerator:
             file_type = self.supported_extensions.get(file_path.suffix.lower(), 'Code')
             
             prompt = f"""
-Analyze this {file_type} file and provide concise documentation:
+Analyze this {file_type} file and provide comprehensive enterprise-level documentation:
 
 File: {file_path.name}
 Content:
 {content}
 
-Provide documentation in this format:
+Provide detailed documentation in this format:
+
 ## {file_path.name}
 
-**Purpose:** Brief description of what this file does
+### 📊 Business Context & Impact
+**Business Problem Statement:**
+- What specific business challenge this code solves
+- Current pain points it addresses
+- Value delivered to the organization
 
-**Key Components:**
-- List main functions, classes, or features
-- Explain their purpose
+**Stakeholder Analysis:**
+- Primary users and their needs
+- Secondary stakeholders who benefit
+- Business processes this integrates with
 
-**Usage:** How to use or import this file (if applicable)
+### 🏗️ Technical Architecture
+**System Design:**
+- Architecture pattern and design principles used
+- Technology stack and dependencies
+- Integration points with other systems
 
-**Dependencies:** Any notable imports or requirements
+**Data Architecture:**
+- Data models and structures used
+- Database interactions and persistence
+- Data validation and business rules
 
-Keep it concise and focused on what developers need to know.
+**Performance & Scalability:**
+- Performance characteristics
+- Scalability considerations
+- Optimization strategies
+
+### 💻 Code Implementation Details
+**Function/Class Documentation:**
+- Detailed breakdown of main components
+- Input/output specifications with examples
+- Error handling and exception management
+- Side effects and external interactions
+
+**Code Examples & Usage:**
+- Basic usage examples
+- Integration scenarios
+- Common patterns and best practices
+
+**Security & Compliance:**
+- Security measures implemented
+- Data protection considerations
+- Compliance requirements addressed
+
+### 🔧 Operations & Maintenance
+**Deployment Considerations:**
+- Environment requirements
+- Configuration needs
+- Monitoring and health checks
+
+**Troubleshooting:**
+- Common issues and solutions
+- Performance tuning recommendations
+- Maintenance requirements
+
+Provide detailed, professional documentation suitable for enterprise environments.
 """
 
             response = requests.post(
@@ -170,7 +216,7 @@ Keep it concise and focused on what developers need to know.
             ])
             
             prompt = f"""
-Analyze this code folder and provide a comprehensive overview:
+Analyze this code folder and provide comprehensive enterprise-level documentation:
 
 Folder: {folder_path.name if folder_path.name != '.' else 'Root Directory'}
 Path: {folder_path}
@@ -178,23 +224,65 @@ Path: {folder_path}
 Files in this folder:
 {files_summary}
 
-Provide documentation in this format:
+Provide detailed documentation in this format:
 
 # {folder_path.name if folder_path.name != '.' else folder_path.absolute().name}
 
-## Overview
-Brief description of what this folder contains and its purpose in the project.
+## 📊 Business Context & Impact
 
-## Structure
-Explain the organization and key components.
+### Business Problem Statement
+Explain what business challenges this module/system solves, the value it delivers, and why it exists.
 
-## Key Files
-Highlight the most important files and their roles.
+### Stakeholder Analysis  
+- **Primary Users:** Who directly interacts with this functionality
+- **Business Processes:** How this integrates into larger business workflows
+- **Success Metrics:** How business value is measured
 
-## Usage
-How to work with the code in this folder.
+## 🏗️ Technical Architecture
 
-Keep it professional and informative.
+### System Design
+- **Architecture Pattern:** How the code is structured and organized
+- **Technology Stack:** Languages, frameworks, libraries used
+- **Design Principles:** SOLID, DRY, separation of concerns applied
+
+### Data Architecture
+- **Data Models:** How information is structured and managed
+- **Integration Points:** Connections to databases, APIs, external systems
+- **Data Flow:** How information moves through the system
+
+### Performance & Scalability
+- **Performance Characteristics:** Speed, throughput, resource usage
+- **Scalability Considerations:** How it handles growth and load
+- **Optimization Strategies:** Techniques used for efficiency
+
+## 💻 Implementation Overview
+
+### Key Components
+Detailed breakdown of main files and their roles in the system.
+
+### Code Organization
+- **Directory Structure:** How files are organized and why
+- **Naming Conventions:** Standards followed throughout
+- **Common Patterns:** Reusable patterns and practices
+
+### Integration & Usage
+- **How to Use:** Getting started with this module
+- **Dependencies:** What this code requires to function
+- **API/Interface:** How other systems interact with this
+
+## 🔧 Operations & Maintenance
+
+### Deployment Considerations
+- **Environment Requirements:** What's needed to run this code
+- **Configuration:** Settings and parameters to configure
+- **Monitoring:** What to watch for operational health
+
+### Development Guidelines
+- **Contributing:** How to modify and extend this code
+- **Testing:** Testing strategies and requirements
+- **Best Practices:** Standards to follow when working with this code
+
+Provide professional, enterprise-grade documentation suitable for technical and business stakeholders.
 """
 
             response = requests.post(
