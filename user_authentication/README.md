@@ -1,20 +1,25 @@
 # user_authentication
 
 ## Overview
-The `user_authentication` folder contains files related to user authentication functionality within the project. This includes validation of user input and authentication logic.
+The `user_authentication` folder contains files related to user authentication functionalities within the project. These files handle user validation and authentication processes.
 
 ## Structure
-The folder is organized to handle user authentication tasks efficiently. It contains two key files: `validator.js` for client-side input validation written in JavaScript and `auth.py` for server-side authentication logic written in Python.
+The folder is organized to manage user authentication tasks efficiently. It includes two key files: `validator.js` written in JavaScript and `auth.py` written in Python.
 
 ## Key Files
-- **validator.js**: This file contains client-side validation logic to ensure that user input meets specified criteria before sending it to the server for authentication. It plays a crucial role in enhancing the security and integrity of user data.
+- **validator.js**: This JavaScript file contains functions for validating user input data, ensuring that the data meets specified criteria before proceeding with authentication processes.
   
-- **auth.py**: The `auth.py` file is responsible for handling server-side authentication processes. It manages user login, registration, and authentication using Python. This file is essential for ensuring secure access to the application and protecting user accounts.
+- **auth.py**: The Python file `auth.py` manages user authentication tasks such as login, logout, and session management. It interacts with the database to verify user credentials and maintain user sessions securely.
 
 ## Usage
-1. To utilize the client-side validation provided by `validator.js`, include the script in your HTML file using `<script src="path/to/validator.js"></script>`. Then, call the validation functions as needed in your front-end code.
-   
-2. For server-side authentication using `auth.py`, ensure that the file is properly integrated into your backend application. Utilize the functions within `auth.py` to handle user authentication processes securely and efficiently.
+1. **validator.js**:
+   - To use the validation functions in `validator.js`, import the file into your JavaScript project.
+   - Call the appropriate validation functions with user input data as parameters to ensure data integrity before authentication.
+
+2. **auth.py**:
+   - Import `auth.py` into your Python project to access the authentication functionalities.
+   - Utilize the provided functions for user login, logout, and session management.
+   - Ensure proper configuration of the database connection for seamless user authentication processes.
 
 ---
 
@@ -25,35 +30,35 @@ The folder is organized to handle user authentication tasks efficiently. It cont
 **Purpose:** This file provides input validation utilities for user authentication, including email, password, and username validation, as well as password strength assessment.
 
 **Key Components:**
-- `validateEmail(email)`: Validates if the input email is in a valid format.
-- `validatePassword(password)`: Validates if the input password meets the criteria of being at least 8 characters with uppercase, lowercase, and number.
-- `validateUsername(username)`: Validates if the input username is between 3 to 20 characters long and contains only alphanumeric characters and underscores.
-- `getPasswordStrength(password)`: Calculates the strength of a password based on length and character types.
+- `validateEmail(email)`: Validates the format of an email address.
+- `validatePassword(password)`: Validates the strength of a password based on specific criteria.
+- `validateUsername(username)`: Validates the format of a username.
+- `getPasswordStrength(password)`: Calculates the strength level of a password based on length and character requirements.
 
-**Usage:** This file can be imported as a module in other JavaScript files to perform input validation tasks.
+**Usage:** This file can be imported as a module to perform input validation in user authentication processes.
 
-**Dependencies:** No external dependencies, all validation functions are self-contained within the `InputValidator` class.
+**Dependencies:** No external dependencies.
 
 ## auth.py
 
-**Purpose:** This file implements a user authentication system with login and registration functionality.
+**Purpose:** This file contains a user authentication system with login and registration functionality.
 
 **Key Components:**
-- `UserAuth`: Class that manages user registration, login, session handling, and authentication.
-- `hash_password()`: Method to hash a password using SHA-256.
-- `register_user()`: Method to register a new user with a unique username, email, and password.
-- `login()`: Method to authenticate a user and generate a session token for active sessions.
-- `logout()`: Method to end a user's session by removing the session token.
-- `is_authenticated()`: Method to check if a session token is valid and active.
+- `UserAuth`: Class that manages user authentication operations.
+- `hash_password`: Method to hash a password using SHA-256.
+- `register_user`: Method to register a new user with a unique username, email, and password.
+- `login`: Method to authenticate a user and generate a session token.
+- `logout`: Method to end a user's session.
+- `is_authenticated`: Method to check if a session token is valid.
 
-**Usage:** Instantiate the `UserAuth` class to use the provided authentication functionalities.
+**Usage:** Instantiate the `UserAuth` class to utilize the user authentication functionalities provided in this file.
 
 **Dependencies:**
-- `hashlib`: For hashing passwords using SHA-256.
-- `json`: For handling JSON data.
-- `datetime`: For working with date and time.
+- `hashlib`: For hashing passwords.
+- `json`: For JSON serialization/deserialization.
+- `datetime`: For working with dates and times.
 - `timedelta`: For calculating time differences.
-- `typing`: For type hinting in Python.
+- `typing`: For type hints and annotations.
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-18 03:27:47*
+*Auto-generated documentation - Last updated: 2025-07-18 03:28:10*
