@@ -3,60 +3,61 @@
 ## 📊 Business Context & Impact
 
 ### Business Problem Statement
-The `test_harder` module aims to address the need for advanced testing capabilities in the software development process. It provides tools for rigorous testing, translation services, and database management, enhancing the quality and reliability of software products.
+The test_harder module provides solutions for advanced testing scenarios, enhancing the reliability and robustness of the software system. It aims to streamline testing processes, improve code quality, and reduce the occurrence of bugs in production.
 
 ### Stakeholder Analysis  
-- **Primary Users:** Quality assurance engineers, developers, and project managers
-- **Business Processes:** Integrates into the software development lifecycle for testing and data management
-- **Success Metrics:** Reduced bug count, improved test coverage, and efficient database operations
+- **Primary Users:** Quality assurance engineers, developers, and project managers.
+- **Business Processes:** Integrates into the software development lifecycle, particularly in the testing phase.
+- **Success Metrics:** Reduced bug count, improved test coverage, faster time to market.
 
 ## 🏗️ Technical Architecture
 
 ### System Design
-- **Architecture Pattern:** Modular design with reusable components
-- **Technology Stack:** Python programming language
-- **Design Principles:** DRY (Don't Repeat Yourself) and separation of concerns applied
+- **Architecture Pattern:** Modular design with reusable components.
+- **Technology Stack:** Python programming language.
+- **Design Principles:** DRY (Don't Repeat Yourself) principle applied for code reusability.
 
 ### Data Architecture
-- **Data Models:** Structured data handling in the WarehouseDB module
-- **Integration Points:** Connection to databases for data storage and retrieval
-- **Data Flow:** Data flows from translation services to database management for storage
+- **Data Models:** No specific data models as it focuses on testing functionality.
+- **Integration Points:** May interact with databases for testing data scenarios.
+- **Data Flow:** Test data flows through the system to validate functionality.
 
 ### Performance & Scalability
-- **Performance Characteristics:** Efficient data processing and testing capabilities
-- **Scalability Considerations:** Ability to handle increased testing demands and data storage requirements
-- **Optimization Strategies:** Code optimization for speed and resource efficiency
+- **Performance Characteristics:** Fast test execution, efficient resource utilization.
+- **Scalability Considerations:** Easily scalable for testing larger codebases.
+- **Optimization Strategies:** Code optimization for faster test runs.
 
 ## 💻 Implementation Overview
 
 ### Key Components
-- RefuDash.py: Module for advanced testing functionalities
-- Translate.py: Module for translation services
-- WareHouseDB.py: Module for database management
+- **RefuDash.py:** Contains advanced testing utilities.
+- **Translate.py:** Handles translation-related testing scenarios.
+- **WarehouseFull.py:** Implements tests for warehouse management functionality.
+- **WareHouseDB.py:** Manages database interactions for testing.
 
 ### Code Organization
-- **Directory Structure:** Organized by functionality to separate testing, translation, and database operations
-- **Naming Conventions:** Descriptive names following Python conventions
-- **Common Patterns:** Utilizes object-oriented programming for reusability
+- **Directory Structure:** Files organized based on functionality.
+- **Naming Conventions:** Descriptive names following PEP8 guidelines.
+- **Common Patterns:** Utilizes common testing patterns like fixtures and assertions.
 
 ### Integration & Usage
-- **How to Use:** Import modules and utilize functions for testing, translation, and database operations
-- **Dependencies:** Python environment with standard libraries
-- **API/Interface:** Functions exposed for interaction with other systems
+- **How to Use:** Import and utilize specific modules for relevant testing scenarios.
+- **Dependencies:** Python environment with necessary libraries.
+- **API/Interface:** Functions and classes provided for interaction with the testing framework.
 
 ## 🔧 Operations & Maintenance
 
 ### Deployment Considerations
-- **Environment Requirements:** Python environment with necessary dependencies
-- **Configuration:** Database connection settings and test configurations
-- **Monitoring:** Monitor test results, translation accuracy, and database performance
+- **Environment Requirements:** Python environment with required dependencies.
+- **Configuration:** Minimal configuration needed for test setup.
+- **Monitoring:** Monitor test results for failures and performance issues.
 
 ### Development Guidelines
-- **Contributing:** Follow version control practices for modifications
-- **Testing:** Unit testing for individual modules and integration testing for overall functionality
-- **Best Practices:** Follow Python coding standards and document code for maintainability
+- **Contributing:** Follow version control and code review processes.
+- **Testing:** Include unit tests for new features and bug fixes.
+- **Best Practices:** Follow coding standards and documentation practices.
 
-This documentation provides a comprehensive overview of the `test_harder` module, detailing its business context, technical architecture, implementation, and operations considerations. It serves as a guide for both technical and business stakeholders involved in utilizing and maintaining this software component.
+This documentation provides insights into the test_harder module, its technical aspects, and how it contributes to the overall software development process.
 
 ---
 
@@ -66,78 +67,70 @@ This documentation provides a comprehensive overview of the `test_harder` module
 
 ### 📊 Business Context & Impact
 **Business Problem Statement:**
-- This script automates the process of updating refund data by fetching new data from a PostgreSQL database, merging it with existing data, and uploading the updated dataset to SharePoint.
-- Addresses the pain points of manual data handling, ensuring data accuracy and timeliness.
-- Delivers value by improving data integrity, reducing manual effort, and enabling real-time data updates.
+- This script automates the process of updating refund data by fetching new data from a PostgreSQL database, merging it with existing data, and uploading the updated dataset to SharePoint. It addresses the manual effort required to keep the refund dataset up-to-date.
+- The script enhances data accuracy and timeliness, improving decision-making processes that rely on refund data.
+- Value delivered includes increased operational efficiency, reduced human error, and improved data integrity.
 
 **Stakeholder Analysis:**
-- **Primary users:** Data analysts, finance team members, and SharePoint administrators who rely on accurate refund data.
-- **Secondary stakeholders:** IT support teams ensuring system availability, compliance officers ensuring data security, and managers monitoring financial performance.
-- **Integration:** Integrates with SharePoint for file management and PostgreSQL for data retrieval.
+- **Primary users:** Data analysts, finance team members, and business intelligence professionals who rely on up-to-date refund data for reporting and analysis.
+- **Secondary stakeholders:** IT administrators responsible for maintaining database and SharePoint access, ensuring data security and compliance.
+- **Integration with business processes:** Integrates with financial reporting, data analytics, and decision-making processes that depend on accurate refund data.
 
 ### 🏗️ Technical Architecture
 **System Design:**
-- Follows a modular design pattern with components for SharePoint integration, database operations, data processing, file handling, and timeout handling.
-- Uses Python with libraries like pandas, psycopg2, and openpyxl for data processing and interaction with external systems.
-- Integrates with Office365 library for SharePoint operations and CloudWatchMetrics for monitoring.
+- **Architecture pattern:** Utilizes a modular design with components for data retrieval, processing, and integration with external systems.
+- **Technology stack:** Python, pandas, PostgreSQL, Office365 library for SharePoint integration.
+- **Integration points:** Connects with PostgreSQL database and SharePoint for data exchange.
 
 **Data Architecture:**
-- Utilizes pandas for merging datasets and managing data structures.
-- Interacts with a PostgreSQL database using psycopg2 for executing SQL queries.
-- Implements data validation within the data processing logic to ensure data accuracy.
+- **Data models:** Utilizes Excel and PostgreSQL data structures for storing refund data.
+- **Database interactions:** Executes SQL queries to fetch new refund data from PostgreSQL.
+- **Data validation:** Ensures data integrity during merging and upload processes.
 
 **Performance & Scalability:**
-- Performance optimized by running continuous updates every 30 minutes to keep data current.
-- Scalability considerations include the ability to handle large datasets efficiently.
-- Optimization strategies include using multiprocessing and threading for parallel processing.
+- **Performance:** Runs continuously, updating data every 30 minutes for real-time data availability.
+- **Scalability:** Handles data processing efficiently, suitable for scaling with increasing data volume.
+- **Optimization:** Implements timeout mechanisms for efficient resource utilization.
 
 ### 💻 Code Implementation Details
 **Function/Class Documentation:**
-- `unix_time_limit`: Context manager for implementing timeout on Unix systems.
-- `get_logger`: Retrieves a logger instance for logging purposes.
-- `get_metrics`: Initializes CloudWatchMetrics client for monitoring.
-- `TimeoutException`: Custom exception for timeout scenarios.
+- **Main tasks:** Downloading Excel file from SharePoint, fetching new data from PostgreSQL, merging datasets, and uploading back to SharePoint.
+- **Input/output:** Takes credentials as environment variables, interacts with Excel and PostgreSQL data, and communicates with SharePoint.
+- **Error handling:** Custom exception for timeout scenarios, Unix-specific timeout functions, and context manager for timeout implementation.
+- **External interactions:** Utilizes CloudWatchMetrics for monitoring and logging.
 
 **Code Examples & Usage:**
-- Example usage: Downloading, processing, and uploading refund data.
-- Integration scenarios: Interacting with SharePoint and PostgreSQL for data operations.
-- Best practices: Implementing timeouts, logging, and error handling for robust code.
-
-**Security & Compliance:**
-- Requires environment variables for SharePoint and database credentials.
-- Implements secure handling of sensitive data like passwords.
-- Compliance requirements addressed by ensuring data protection during file transfers and database interactions.
-
-### 🔧 Operations &
+- **Usage:** Run the script to automate refund data processing and integration with SharePoint.
+-
 
 ## Translate.py
 
 ### 📊 Business Context & Impact
 **Business Problem Statement:**
-- This script automates the process of retrieving, translating, and storing survey feedback from various sources, addressing the challenge of handling multilingual survey responses efficiently.
-- It streamlines the translation process, reducing manual effort and potential errors in language conversion.
-- The value delivered includes improved data accuracy, faster processing times, and enhanced understanding of customer feedback across different languages.
+- This script automates the translation and processing of survey feedback from various sources, enhancing data accessibility and analysis.
+- It addresses the challenge of handling multilingual survey responses efficiently and accurately.
+- The value delivered includes improved data quality, faster analysis, and enhanced decision-making based on translated feedback.
 
 **Stakeholder Analysis:**
-- Primary users include data analysts, survey administrators, and business intelligence teams who rely on accurate survey data for decision-making.
-- Secondary stakeholders such as customer support teams benefit from better insights into customer feedback.
-- Integrates with business processes related to customer experience management, feedback analysis, and data-driven decision-making.
+- Primary users are data analysts and survey administrators who need translated survey data for analysis and reporting.
+- Secondary stakeholders include decision-makers who rely on survey insights for strategic planning.
+- Integrates with survey platforms, data analytics tools, and reporting systems within the organization.
 
 ### 🏗️ Technical Architecture
 **System Design:**
-- Utilizes a modular design with multithreading for improved performance.
-- Relies on Redshift database for data storage and retrieval, DeepL API for translation, and Python libraries for data processing.
-- Integrates with external systems for language translation and database connectivity.
+- Utilizes a multithreaded approach for processing survey responses efficiently.
+- Relies on Redshift database for data storage and retrieval.
+- Integrates with DeepL API for language translation.
 
 **Data Architecture:**
-- Uses pandas DataFrames for data manipulation and storage.
+- Uses pandas DataFrames for data manipulation.
 - Interacts with Redshift database for fetching and storing survey data.
-- Implements data validation to ensure the integrity of translated responses.
+- Applies business rules for translation and data insertion.
 
 **Performance & Scalability:**
-- Utilizes multithreading to enhance performance when processing multiple survey responses concurrently.
-- Considers scalability by leveraging multithreading and efficient data processing techniques.
-- Optimizes translation retries to handle translation failures and improve overall performance.
+- Leverages multithreading for improved performance when processing large volumes of survey responses.
+- Scalable design allows for handling increasing data loads.
+- Optimizes translation process with retry mechanism for robustness.
 
 ### 💻 Code Implementation Details
 **Function/Class Documentation:**
@@ -146,59 +139,111 @@ This documentation provides a comprehensive overview of the `test_harder` module
 - `insert_data(data, table, columns)`: Inserts data into the specified table in the database.
 
 **Code Examples & Usage:**
-- Basic usage involves setting up environment variables and running the script to automate survey translation.
-- Integration scenarios include incorporating this script into ETL pipelines for survey data processing.
+- Basic usage involves calling the functions with appropriate parameters.
+- Integration with survey platforms by fetching survey responses and storing translated data.
 - Best practices include error handling, logging, and efficient data processing techniques.
 
 **Security & Compliance:**
-- Implements environment variables for sensitive data like database credentials and API keys.
-- Considers data protection by securely handling translation requests and responses.
+- Utilizes environment variables for sensitive information to enhance security.
+- Considers data protection measures when handling survey responses.
 - Addresses compliance requirements related to data privacy and secure data handling.
 
-### 🔧 Operations &
+### 🔧 Operations & Maintenance
+**Deployment Considerations:**
+- Requires environment variables for database connection and API key.
+- Configuration file 'no_secret_config.py' must be present for script execution.
+- Monitoring script performance and database connections for health checks.
+
+**Troubleshooting:**
+- Common issues may include API
+
+## WarehouseFull.py
+
+### 📊 Business Context & Impact
+**Business Problem Statement:**
+- This code file is part of a system that manages warehouse stock alerts by updating inventory information based on received and produced items.
+- It helps in maintaining accurate stock levels, identifying shortages, and optimizing inventory management processes.
+- The system provides real-time insights into stock levels and helps in preventing stockouts or overstock situations.
+
+**Stakeholder Analysis:**
+- **Primary users:** Warehouse managers, inventory analysts, production planners.
+- **Secondary stakeholders:** Logistics team, procurement team, finance department.
+- **Integration:** Integrates with inventory management systems, production systems, and reporting tools.
+
+### 🏗️ Technical Architecture
+**System Design:**
+- Follows a modular design pattern with separate functions for logging, metrics, and core inventory update logic.
+- Utilizes Python libraries for data manipulation and interaction with SharePoint and CloudWatch.
+- Integrates with external systems for logging and metrics tracking.
+
+**Data Architecture:**
+- Utilizes DataFrames for processing inventory data.
+- Interacts with Excel files for updating inventory information.
+- Implements business logic for calculating stock levels based on received and produced items.
+
+**Performance & Scalability:**
+- Performance optimized by processing items in a loop and updating inventory efficiently.
+- Scalability considerations include handling large datasets and optimizing data processing algorithms.
+- Strategies for optimization include parallel processing and efficient data retrieval techniques.
+
+### 💻 Code Implementation Details
+**Function/Class Documentation:**
+- **get_logger():** Lazy-initializes and returns the global logger for logging purposes.
+- **get_metrics():** Lazy-initializes and returns the CloudWatchMetrics client for metrics tracking.
+- **update_items_inventory():** Updates inventory information based on received and produced items.
+
+**Code Examples & Usage:**
+- **Basic usage:** Call `update_items_inventory()` function with input DataFrames and Excel worksheet.
+- **Integration scenarios:** Integrate with data sources to fetch received and produced item data.
+- **Best practices:** Utilize lazy initialization for logger and metrics, follow Python coding conventions.
+
+**Security & Compliance:**
+- No explicit security measures mentioned in the code file.
+- Considerations for data protection include access controls to sensitive inventory information.
+- Compliance requirements may involve data privacy regulations and audit trails for inventory updates.
+
+### 🔧 Operations & Maintenance
+**Deployment Considerations:**
+- Requires Python environment with necessary dependencies installed.
+- Configuration needs include setting up CloudWatchMetrics credentials and
 
 ## WareHouseDB.py
 
 ### 📊 Business Context & Impact
 **Business Problem Statement:**
-- This code file contains SQL queries and functions related to warehouse operations, such as tracking SKU quantities, received materials, and frames.
-- It helps in monitoring inventory levels, analyzing shipments, and managing warehouse data efficiently.
-- The code supports decision-making processes by providing insights into warehouse activities and stock movements.
+- This code file retrieves and processes data related to warehouse operations, such as SKU quantities, received materials, and frame details from orders.
+- It addresses the need for real-time insights into warehouse inventory and operations, helping optimize stock management and order fulfillment.
+- The organization benefits from improved inventory accuracy, streamlined operations, and enhanced decision-making based on data-driven insights.
 
 **Stakeholder Analysis:**
-- Primary users include warehouse managers, inventory analysts, and operations teams who rely on accurate warehouse data for planning and decision-making.
-- Secondary stakeholders may include finance teams, procurement departments, and IT support staff who benefit from streamlined warehouse operations and data reporting.
-- Integrates with order management systems, material tracking systems, and reporting tools used in warehouse management processes.
+- Primary users include warehouse managers, inventory analysts, and operations teams who rely on accurate inventory data for daily operations.
+- Secondary stakeholders like finance teams and sales departments benefit from optimized inventory levels and improved order fulfillment processes.
+- Integrates with order management systems, inventory tracking tools, and reporting platforms to streamline warehouse operations.
 
 ### 🏗️ Technical Architecture
 **System Design:**
-- Follows a modular design with separate SQL queries and logging/metrics functions for better code organization.
-- Relies on Python for scripting, psycopg2 and pyodbc for database connections, and external libraries for logging and metrics tracking.
-- Integrates with cloud services like AWS CloudWatch for metrics monitoring and Office 365 SharePoint for data access.
+- Follows a modular design pattern with separate SQL queries and logging/metrics functions for better code organization and maintainability.
+- Relies on Python libraries like psycopg2, pyodbc, and openpyxl for database interactions, cloud metrics tracking, and Excel file generation.
+- Integrates with external systems like AWS CloudWatch, Office365 SharePoint, and custom logging solutions for comprehensive warehouse data management.
 
 **Data Architecture:**
-- Utilizes SQL queries to extract warehouse data from relational databases.
-- Interacts with databases using psycopg2 and pyodbc libraries for executing queries and fetching results.
-- Implements business logic and data validation within SQL queries to ensure data accuracy.
+- Utilizes SQL queries to extract SKU quantities, received material details, and frame information from the warehouse database.
+- Interacts with relational databases using psycopg2 and pyodbc for data retrieval and processing.
+- Applies business rules and filters within SQL queries to ensure data accuracy and relevance for warehouse analytics.
 
 **Performance & Scalability:**
-- SQL queries are optimized for performance by filtering data based on timestamps and relevant conditions.
-- Scalability considerations include efficient query execution, database indexing, and resource utilization.
-- Strategies for optimizing query performance and scaling database operations are crucial for handling increasing warehouse data volumes.
+- Performance optimized by querying only relevant data within specified timeframes to minimize database load.
+- Scalability considerations include potential optimizations in SQL queries, parallel processing using multiprocessing, and cloud-based storage for large datasets.
+- Strategies like query indexing, caching, and data partitioning can further enhance performance as data volumes grow.
 
 ### 💻 Code Implementation Details
 **Function/Class Documentation:**
-- `SKU_SQL`: Retrieves SKU quantities within a specified timeframe from order-related tables.
-- `RECIEVED_MATERIAL`: Fetches details of received materials including barcode, supplier, and value.
-- `FRAMES_SQL`: Retrieves information about frames associated with shipped orders in the last 24 hours.
+- **SKU_SQL:** Retrieves aggregated SKU quantities within the last 24 hours based on shipped orders.
+- **RECIEVED_MATERIAL:** Fetches details of received materials including barcode, supplier, and value within the last 24 hours.
+- **FRAMES_SQL:** Extracts frame details like quantity, SKU, frame name, and size for archived orders shipped in the last 24 hours.
 
 **Code Examples & Usage:**
-- Example usage: Execute the SQL queries to retrieve warehouse data for analysis and reporting.
-- Integration scenarios: Integrate with reporting tools or data visualization platforms to create warehouse performance dashboards.
-- Best practices: Ensure proper error handling, logging, and data validation to maintain data integrity and reliability.
-
-**Security & Compliance:**
-- Secure database
+- Example usage involves executing the SQL queries to fetch warehouse
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-18 11:48:35*
+*Auto-generated documentation - Last updated: 2025-07-18 13:06:51*
