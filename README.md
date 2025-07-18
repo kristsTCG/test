@@ -4,20 +4,18 @@
 This folder contains a Python script named `test_code.py` that plays a significant role in the project. The script is 2127 characters long and is crucial for the functionality of the software.
 
 ## Structure
-The folder consists of a single Python script, `test_code.py`, which is responsible for executing specific functions within the project. The script may contain various functions, classes, or methods that contribute to the overall functionality of the software.
+The folder consists of a single Python script, `test_code.py`, which is the main component of this directory. The script contains the code necessary for a specific functionality within the project.
 
 ## Key Files
-- **test_code.py**: This file is the primary script in the folder and contains the core logic of the project. It is essential for the execution of specific tasks within the software.
+- **test_code.py**: This Python script is the primary file in this folder. It contains the implementation code for a specific feature or functionality within the project.
 
 ## Usage
 To work with the code in this folder, follow these steps:
 1. Open the `test_code.py` file in a Python IDE or text editor.
-2. Review the code to understand its functionality and structure.
-3. Make necessary modifications or additions to the script as required for the project.
-4. Execute the script to observe the output and verify the changes made.
-5. Ensure that any changes made do not impact the overall functionality of the software.
-
-By following these steps, you can effectively work with the code in this folder and contribute to the project's development.
+2. Review the code to understand its functionality and implementation.
+3. Make any necessary modifications or enhancements to the code.
+4. Run the `test_code.py` script to execute the functionality it provides.
+5. Debug and test the code as needed to ensure it functions correctly within the project.
 
 ---
 
@@ -35,9 +33,9 @@ By following these steps, you can effectively work with the code in this folder 
 - `get_active_users()`: Method to retrieve all active users.
 - `deactivate_user(user_id)`: Method to deactivate a user instead of deleting.
 
-**Usage:** This file can be used by importing the `UserManager` class and creating an instance to manage users.
+**Usage:** Run the file to create a `UserManager` instance and perform user management operations. Example usage is provided at the end of the file.
 
 **Dependencies:** None.
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-18 08:52:52*
+*Auto-generated documentation - Last updated: 2025-07-18 08:53:17*
