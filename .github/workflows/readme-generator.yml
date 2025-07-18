@@ -3,6 +3,8 @@ name: Auto-Generate README Documentation
 on:
   push:
     branches: [ main, master, develop ]
+    paths-ignore:
+      - '**README.md'  # Don't trigger on README changes
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
