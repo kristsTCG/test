@@ -1,23 +1,16 @@
 # Folder Documentation
 
 ## Overview
-This folder contains a single Python file named `test_code.py`. The purpose of this folder in the project is to house a script for testing specific functionalities or components of the software.
+This folder contains a single Python file named `test_code.py`. The purpose of this folder is to store the code related to the testing functionality of the project.
 
 ## Structure
-The folder has a simple structure with only one Python file present. The file `test_code.py` is responsible for executing test cases and verifying the expected behavior of certain parts of the software.
+The folder has a simple structure with only one Python file present. The file `test_code.py` is responsible for handling the testing logic of the project.
 
 ## Key Files
-- **test_code.py**: This file is the main script for running test cases. It contains 2127 characters of code and is crucial for ensuring the reliability and correctness of the software.
+- **test_code.py**: This file contains the testing code for the project. It is crucial for ensuring the functionality and reliability of the software.
 
 ## Usage
-To work with the code in this folder, follow these steps:
-1. Open the `test_code.py` file in a Python IDE or text editor.
-2. Review the existing test cases and add new ones as needed.
-3. Run the script to execute the test cases and verify the functionality of the software components being tested.
-4. Analyze the output to identify any failures or issues that need to be addressed.
-5. Make necessary modifications to the code to fix any bugs or improve the test coverage.
-
-By following these steps, you can effectively use the code in this folder to test and validate the functionality of the software.
+To work with the code in this folder, you can open the `test_code.py` file in a Python IDE or text editor. You can run the tests defined in the file by executing the script. Make sure to follow any specific instructions or guidelines provided within the file for running the tests effectively.
 
 ---
 
@@ -35,9 +28,9 @@ By following these steps, you can effectively use the code in this folder to tes
   - `get_active_users()`: Retrieves all active users.
   - `deactivate_user(user_id)`: Deactivates a user instead of deleting.
 
-**Usage:** This file can be used by importing the `UserManager` class and creating an instance to manage users.
+**Usage:** Run the file to create a `UserManager` instance and test user management functionalities. Example usage is provided at the end of the file.
 
-**Dependencies:** None.
+**Dependencies:** No external dependencies.
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-18 01:48:05*
+*Auto-generated documentation - Last updated: 2025-07-18 01:48:27*
