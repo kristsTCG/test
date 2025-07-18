@@ -1,22 +1,21 @@
 # user_authentication
 
 ## Overview
-The `user_authentication` folder contains files related to user authentication functionality within the project. This includes validation of user input and authentication processes.
+The `user_authentication` folder contains files related to user authentication functionalities within the project. It handles user validation and authentication processes.
 
 ## Structure
-The folder is organized to handle user authentication tasks efficiently. It contains two key files, `validator.js` written in JavaScript and `auth.py` written in Python.
+The folder is organized to manage user authentication tasks efficiently. It includes two key files: `validator.js` written in JavaScript and `auth.py` written in Python.
 
 ## Key Files
-- **validator.js**: This file contains client-side validation logic for user input. It ensures that the data entered by the user meets the required criteria before submission.
-- **auth.py**: This file handles server-side authentication processes. It manages user login, registration, and authentication using Python.
+- **validator.js**: This JavaScript file contains 1212 characters and is responsible for validating user input data. It ensures that user data meets the required criteria before proceeding with authentication processes.
+  
+- **auth.py**: This Python file consists of 2198 characters and handles the authentication logic for users. It verifies user credentials and grants access based on the authentication process.
 
 ## Usage
-1. To utilize the client-side validation provided by `validator.js`, include this file in your HTML file using a script tag.
-   ```html
-   <script src="user_authentication/validator.js"></script>
-   ```
-2. Use the functions defined in `validator.js` to validate user input before submitting forms.
-3. To implement server-side authentication, import `auth.py` in your Python project and utilize the functions provided for user authentication tasks.
+To utilize the user authentication functionalities in this folder:
+1. Review the `validator.js` file to understand the validation criteria for user input data.
+2. Explore the `auth.py` file to comprehend the authentication logic and processes.
+3. Integrate these files into your project to implement user authentication features effectively.
 
 ---
 
@@ -24,38 +23,38 @@ The folder is organized to handle user authentication tasks efficiently. It cont
 
 ## validator.js
 
-**Purpose:** This file provides input validation utilities for user authentication, including validating email, password, and username inputs, as well as determining the strength of a password.
+**Purpose:** This file provides input validation utilities for user authentication, including validating email, password, and username formats, as well as determining the strength of a password.
 
 **Key Components:**
-- `validateEmail(email)`: Validates the format of an email address.
-- `validatePassword(password)`: Validates the strength of a password based on specific criteria.
-- `validateUsername(username)`: Validates the format of a username.
-- `getPasswordStrength(password)`: Determines the strength level of a password based on length and character types.
+- `validateEmail(email)`: Validates the format of an email address using a regular expression.
+- `validatePassword(password)`: Validates that a password meets complexity requirements (at least 8 characters with uppercase, lowercase, and number).
+- `validateUsername(username)`: Validates that a username is 3-20 characters long, alphanumeric, and contains underscores only.
+- `getPasswordStrength(password)`: Calculates the strength of a password based on length and character types.
 
-**Usage:** To use this file, import it into your project using `require` or `import` statements and utilize the provided validation functions as needed.
+**Usage:** This file can be imported as a module in other JavaScript files using `require` or ES6 `import` statements.
 
-**Dependencies:** This file does not have any external dependencies.
+**Dependencies:** No external dependencies.
 
 ## auth.py
 
-**Purpose:** This file contains a user authentication system with login and registration functionality.
+**Purpose:** This file implements a user authentication system with login and registration functionality.
 
 **Key Components:**
-- `UserAuth`: Class that manages user registration, login, and session management.
-- `hash_password`: Method to hash a password using SHA-256.
-- `register_user`: Method to register a new user with a unique username, email, and password.
-- `login`: Method to authenticate a user with a username and password and generate a session token.
-- `logout`: Method to end a user session based on the session token.
-- `is_authenticated`: Method to check if a session token is valid.
+- `UserAuth`: Class that manages user registration, login, session handling, and authentication.
+- `hash_password()`: Method to hash a password using SHA-256.
+- `register_user()`: Registers a new user with a unique username, email, and hashed password.
+- `login()`: Authenticates a user with a username and password, generates a session token, and tracks the last login time.
+- `logout()`: Ends a user session by removing the session token from active sessions.
+- `is_authenticated()`: Checks if a session token is valid and has not expired.
 
-**Usage:** Instantiate the `UserAuth` class to use the provided authentication functionalities.
+**Usage:** Instantiate `UserAuth` to use the provided authentication functionalities.
 
 **Dependencies:**
-- `hashlib`: For hashing passwords.
-- `json`: For JSON serialization.
-- `datetime`: For handling date and time.
-- `timedelta`: For calculating time differences.
-- `typing`: For type hints.
+- `hashlib`: Used for hashing passwords.
+- `json`: Not used in this file but imported.
+- `datetime`: Used for handling dates and times.
+- `timedelta`: Used for calculating session expiration time.
+- `typing`: Used for type hints.
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-18 04:44:46*
+*Auto-generated documentation - Last updated: 2025-07-18 04:45:07*
