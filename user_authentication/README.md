@@ -1,27 +1,22 @@
 # user_authentication
 
 ## Overview
-The `user_authentication` folder contains files related to user authentication functionalities within the project. This includes validation of user input and authentication processes.
+The `user_authentication` folder contains files related to user authentication functionality in the project. This module is responsible for validating user input and handling authentication processes.
 
 ## Structure
-The folder is organized to handle user authentication tasks efficiently. It contains two key files: `validator.js` for client-side input validation written in JavaScript and `auth.py` for server-side authentication logic written in Python.
+The folder is organized to handle user authentication tasks efficiently. It includes two key files: `validator.js` written in JavaScript and `auth.py` written in Python.
 
 ## Key Files
-- **validator.js**: This file contains client-side validation functions to ensure that user input meets specified criteria before submission.
-- **auth.py**: The `auth.py` file handles server-side authentication processes, such as user login, registration, and token generation.
+1. `validator.js`: This JavaScript file contains 1212 characters and is responsible for validating user input data related to authentication. It ensures that the input meets the required criteria before proceeding with the authentication process.
+
+2. `auth.py`: This Python file contains 2198 characters and is responsible for handling the authentication logic. It manages user authentication, such as verifying credentials and generating authentication tokens.
 
 ## Usage
-1. **validator.js**:
-   - Modify the validation functions as needed to match the input requirements of the project.
-   - Include the `validator.js` file in your HTML templates using a script tag.
-   - Call the validation functions on user input events (e.g., form submission) to validate user input.
-
-2. **auth.py**:
-   - Customize the authentication logic to integrate with your project's user management system.
-   - Import the `auth.py` file in your main application file to access the authentication functionalities.
-   - Use the provided functions for user registration, login, and token generation as required.
-
-Ensure to test the user authentication functionalities thoroughly to maintain the security and integrity of user data in your project.
+To work with the code in this folder, follow these steps:
+1. Review `validator.js` to understand the validation rules for user input data.
+2. Study `auth.py` to grasp the authentication logic implemented in the project.
+3. Modify the files as needed to customize the user authentication process.
+4. Ensure that any changes made adhere to the project's authentication requirements and security standards.
 
 ---
 
@@ -29,13 +24,13 @@ Ensure to test the user authentication functionalities thoroughly to maintain th
 
 ## validator.js
 
-**Purpose:** This file provides input validation utilities for user authentication, including validating email, password, and username formats, as well as determining password strength.
+**Purpose:** This file provides input validation utilities for user authentication, including email, password, and username validation, as well as a function to determine password strength.
 
 **Key Components:**
-- `validateEmail(email)`: Validates the format of an email address.
-- `validatePassword(password)`: Validates the strength of a password based on specific criteria.
-- `validateUsername(username)`: Validates the format of a username.
-- `getPasswordStrength(password)`: Determines the strength level of a password based on length and character types.
+- `validateEmail(email)`: Validates if the input email is in a valid format.
+- `validatePassword(password)`: Validates if the input password meets the criteria of at least 8 characters with uppercase, lowercase, and a number.
+- `validateUsername(username)`: Validates if the input username is 3-20 characters long and contains only alphanumeric characters and underscores.
+- `getPasswordStrength(password)`: Calculates the strength of a password based on its length and character composition.
 
 **Usage:** Import the `InputValidator` class from this file to use the validation functions in your authentication logic.
 
@@ -43,24 +38,24 @@ Ensure to test the user authentication functionalities thoroughly to maintain th
 
 ## auth.py
 
-**Purpose:** This file provides a user authentication system with login and registration functionality.
+**Purpose:** User authentication system with login and registration functionality.
 
 **Key Components:**
-- `UserAuth`: Class that manages user registration, login, and session handling.
+- `UserAuth`: Class managing user authentication operations.
 - `hash_password`: Method to hash a password using SHA-256.
-- `register_user`: Method to register a new user with a unique username, email, and password.
-- `login`: Method to authenticate a user and generate a session token for active sessions.
-- `logout`: Method to end a user session based on the session token.
-- `is_authenticated`: Method to check if a session token is valid and active.
+- `register_user`: Method to register a new user with username, email, and password.
+- `login`: Method to authenticate a user and generate a session token.
+- `logout`: Method to end a user session.
+- `is_authenticated`: Method to check if a session token is valid.
 
-**Usage:** Instantiate the `UserAuth` class to manage user authentication operations.
+**Usage:** Instantiate `UserAuth` to utilize user authentication functionalities.
 
 **Dependencies:**
-- `hashlib`: For hashing passwords using SHA-256.
-- `json`: For JSON serialization (not used in this file).
-- `datetime`: For working with dates and times.
+- `hashlib`: For hashing functions.
+- `json`: For JSON serialization and deserialization.
+- `datetime`: For handling date and time operations.
 - `timedelta`: For calculating time differences.
-- `typing`: For type hints (not used in this file).
+- `typing`: For type hints.
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-18 07:58:17*
+*Auto-generated documentation - Last updated: 2025-07-18 07:58:44*
