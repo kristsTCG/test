@@ -1,16 +1,16 @@
 # Folder Documentation
 
 ## Overview
-This folder contains a single Python file, `test_code.py`, which is 2127 characters long. The purpose of this folder in the project is to house the code for testing specific functionalities or components.
+This folder contains a Python script named `test_code.py` which plays a significant role in the project.
 
 ## Structure
-The folder structure is simple, with only one Python file present. The file `test_code.py` is responsible for testing specific functionalities within the project.
+The folder has only one file, `test_code.py`, which is a Python script.
 
 ## Key Files
-- `test_code.py`: This file is the main component of this folder and contains the test code for specific functionalities. It plays a crucial role in ensuring the functionality of the project is working as expected.
+- `test_code.py`: This file is the main script in this folder and contains 2127 characters of code. It is crucial for the functionality of the project.
 
 ## Usage
-To work with the code in this folder, you can open the `test_code.py` file in a Python IDE or text editor. Review the code to understand the specific tests being conducted and run the file to execute the tests. Make sure to follow any instructions or guidelines provided within the file for accurate testing results.
+To work with the code in this folder, you can open `test_code.py` in a Python IDE or text editor to view and modify the code as needed. Make sure to follow any instructions or guidelines provided within the script for proper usage.
 
 ---
 
@@ -28,9 +28,9 @@ To work with the code in this folder, you can open the `test_code.py` file in a 
 - `get_active_users()`: Method to retrieve all active users.
 - `deactivate_user(user_id)`: Method to deactivate a user instead of deleting.
 
-**Usage:** Run the file to create a `UserManager` instance and test user management functionalities.
+**Usage:** To use this file, you can import the `UserManager` class and create an instance to manage users. You can then add users, find users, get active users, and deactivate users as needed.
 
-**Dependencies:** None.
+**Dependencies:** No external dependencies.
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-18 05:10:22*
+*Auto-generated documentation - Last updated: 2025-07-18 05:10:44*
