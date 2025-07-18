@@ -1,16 +1,22 @@
 # Folder Documentation
 
 ## Overview
-This folder contains a Python script named `test_code.py`. The purpose of this script is to perform specific functions within the project.
+This folder contains a single Python file, `test_code.py`, which plays a significant role in the project. The file likely contains code for testing various components or functionalities within the project.
 
 ## Structure
-The folder consists of a single Python script file, `test_code.py`, which contains the code for the functionality it provides.
+The folder structure is simple, with only one Python file present. It is essential to review the contents of `test_code.py` to understand its functionality fully.
 
 ## Key Files
-- `test_code.py`: This file is the main script in the folder and contains the code for the specific functionality it provides.
+- `test_code.py`: This file is crucial as it contains code for testing different aspects of the project. It is essential for ensuring the reliability and correctness of the project's functionalities.
 
 ## Usage
-To work with the code in this folder, you can open the `test_code.py` file in a Python IDE or text editor. You can run the script by executing it in a Python environment to utilize its functionality. Make sure to review the code comments and documentation within the script for a better understanding of its purpose and usage.
+To work with the code in this folder:
+1. Open the `test_code.py` file using a Python IDE or text editor.
+2. Review the code to understand the testing scenarios and functionalities being tested.
+3. Make any necessary modifications or additions to the test cases as needed.
+4. Run the `test_code.py` file to execute the tests and verify the project's functionality.
+
+Ensure that any changes made to the test cases are thoroughly tested to maintain the project's integrity.
 
 ---
 
@@ -26,12 +32,14 @@ To work with the code in this folder, you can open the `test_code.py` file in a 
   - `get_user_by_id(user_id)`: Finds a user by ID.
   - `find_user_by_email(email)`: Finds a user by email address.
   - `get_active_users()`: Retrieves all active users.
-  - `deactivate_user(user_id)`: Deactivates a user.
-- Example usage to demonstrate adding users, searching by email, and deactivating users.
+  - `deactivate_user(user_id)`: Deactivates a user without deleting.
+- Example usage provided at the end of the file.
 
-**Usage:** This file can be imported into other Python scripts to manage users for testing purposes.
+**Usage:** 
+- To use the `UserManager` class, create an instance of it: `manager = UserManager()`.
+- Call the methods of the `UserManager` class to manage users as needed.
 
 **Dependencies:** None.
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-18 07:20:21*
+*Auto-generated documentation - Last updated: 2025-07-18 07:20:44*
