@@ -1,20 +1,29 @@
 # user_authentication
 
 ## Overview
-The `user_authentication` folder contains files related to user authentication functionality within the project. This includes validation of user input and authentication logic.
+The `user_authentication` folder contains files related to user authentication functionalities in the project. It handles user validation and authentication processes.
 
 ## Structure
-The folder is organized to handle user authentication tasks efficiently. It includes two key files: `validator.js` written in JavaScript for input validation and `auth.py` written in Python for authentication logic.
+The folder `user_authentication` consists of two key files:
+- `validator.js`: A JavaScript file with 1212 characters responsible for validating user input data.
+- `auth.py`: A Python file with 2198 characters that manage user authentication processes.
 
 ## Key Files
-1. `validator.js`: This file contains functions for validating user input, ensuring that data entered by users meets specified criteria and is safe for processing.
-   
-2. `auth.py`: This file implements authentication logic for verifying user credentials and managing user sessions securely.
+### validator.js
+- **Role**: Responsible for validating user input data.
+- **Size**: 1212 characters
+- **Language**: JavaScript
+
+### auth.py
+- **Role**: Manages user authentication processes.
+- **Size**: 2198 characters
+- **Language**: Python
 
 ## Usage
-1. To utilize the validation functions in `validator.js`, import the file into your JavaScript code and call the appropriate validation functions as needed.
-   
-2. For authentication tasks, import `auth.py` into your Python code and utilize the provided functions to authenticate users and manage user sessions securely.
+1. To utilize the validation functionality, refer to `validator.js` and integrate the validation logic into your user input forms.
+2. For user authentication processes, utilize `auth.py` by importing the necessary functions and methods into your project.
+
+Ensure to follow the specific guidelines and functions defined in each file for proper user authentication and validation within the project.
 
 ---
 
@@ -22,32 +31,17 @@ The folder is organized to handle user authentication tasks efficiently. It incl
 
 ## validator.js
 
-**Purpose:** This file provides input validation utilities for user authentication, including email, password, and username validation, as well as password strength assessment.
+**Purpose:** This file provides input validation utilities for user authentication, including email, password, and username validation, as well as a function to determine the strength of a password.
 
 **Key Components:**
-- `validateEmail(email)`: Validates if the input email is in a valid format.
-- `validatePassword(password)`: Validates if the input password meets the specified criteria.
-- `validateUsername(username)`: Validates if the input username meets the specified criteria.
-- `getPasswordStrength(password)`: Calculates the strength level of a given password based on length and character requirements.
+- `validateEmail(email)`: Validates the format of an email address.
+- `validatePassword(password)`: Validates the strength of a password based on length, uppercase, lowercase, and numbers.
+- `validateUsername(username)`: Validates the format of a username with alphanumeric and underscore characters.
+- `getPasswordStrength(password)`: Determines the strength level of a password based on various criteria.
 
-**Usage:** To use this file, import `InputValidator` class into your code and call the desired validation functions or password strength assessment function.
+**Usage:** To use this file, import `InputValidator` class where input validation is needed and call the respective validation functions.
 
-```javascript
-const InputValidator = require('./validator.js');
-
-const email = 'example@example.com';
-const isEmailValid = InputValidator.validateEmail(email);
-
-const password = 'StrongPassword123!';
-const isPasswordValid = InputValidator.validatePassword(password);
-
-const username = 'user123';
-const isUsernameValid = InputValidator.validateUsername(username);
-
-const passwordStrength = InputValidator.getPasswordStrength(password);
-```
-
-**Dependencies:** This file does not have any external dependencies.
+**Dependencies:** No external dependencies.
 
 ## auth.py
 
@@ -58,17 +52,17 @@ const passwordStrength = InputValidator.getPasswordStrength(password);
 - `hash_password`: Method to hash a password using SHA-256.
 - `register_user`: Method to register a new user with a unique username, email, and password.
 - `login`: Method to authenticate a user and generate a session token for active sessions.
-- `logout`: Method to end a user session by removing the session token from active sessions.
-- `is_authenticated`: Method to check if a session token is valid and active.
+- `logout`: Method to end a user's session by removing the session token.
+- `is_authenticated`: Method to check if a session token is valid and still active.
 
-**Usage:** Import the `UserAuth` class from this file to handle user authentication in your Python application.
+**Usage:** Instantiate the `UserAuth` class to manage user authentication operations like registration, login, and session handling.
 
 **Dependencies:**
 - `hashlib`: For hashing passwords using SHA-256.
-- `json`: For JSON serialization (not used in this file).
+- `json`: For handling JSON data.
 - `datetime`: For working with dates and times.
 - `timedelta`: For calculating time differences.
 - `typing`: For type hints and annotations.
 
 ---
-*Auto-generated documentation - Last updated: 2025-07-18 07:34:24*
+*Auto-generated documentation - Last updated: 2025-07-18 07:34:48*
