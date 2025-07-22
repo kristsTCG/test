@@ -83,7 +83,7 @@ Provide a clear explanation of what was implemented, fixed, or changed. Focus on
                     'Content-Type': 'application/json'
                 },
                 json={
-                    'model': 'gpt-3.5-turbo',
+                    'model': 'o3',
                     'messages': [
                         {
                             'role': 'system', 
@@ -94,8 +94,8 @@ Provide a clear explanation of what was implemented, fixed, or changed. Focus on
                             'content': prompt
                         }
                     ],
-                    'max_tokens': 300,
-                    'temperature': 0.3
+                    'max_tokens': 500,
+                    'temperature': 0
                 }
             )
             
